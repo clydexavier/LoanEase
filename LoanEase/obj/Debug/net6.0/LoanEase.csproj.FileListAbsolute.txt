@@ -1,0 +1,12 @@
+C:\Users\salar\Documents\LoanEase\LoanEase\bin\Debug\net6.0\LoanEase.deps.json
+C:\Users\salar\Documents\LoanEase\LoanEase\bin\Debug\net6.0\LoanEase.dll
+C:\Users\salar\Documents\LoanEase\LoanEase\bin\Debug\net6.0\LoanEase.pdb
+C:\Users\salar\Documents\LoanEase\LoanEase\obj\Debug\net6.0\LoanEase.csproj.AssemblyReference.cache
+C:\Users\salar\Documents\LoanEase\LoanEase\obj\Debug\net6.0\LoanEase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\salar\Documents\LoanEase\LoanEase\obj\Debug\net6.0\LoanEase.AssemblyInfoInputs.cache
+C:\Users\salar\Documents\LoanEase\LoanEase\obj\Debug\net6.0\LoanEase.AssemblyInfo.cs
+C:\Users\salar\Documents\LoanEase\LoanEase\obj\Debug\net6.0\LoanEase.csproj.CoreCompileInputs.cache
+C:\Users\salar\Documents\LoanEase\LoanEase\obj\Debug\net6.0\LoanEase.dll
+C:\Users\salar\Documents\LoanEase\LoanEase\obj\Debug\net6.0\refint\LoanEase.dll
+C:\Users\salar\Documents\LoanEase\LoanEase\obj\Debug\net6.0\LoanEase.pdb
+C:\Users\salar\Documents\LoanEase\LoanEase\obj\Debug\net6.0\ref\LoanEase.dll
