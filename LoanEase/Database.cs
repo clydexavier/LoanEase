@@ -10,12 +10,16 @@ namespace LoanEase
     public static class Database
     {
         public static List<Lender> lenders;
-        public static List<Borrower> borrowers;
+        public static List<Borrower> borrowers = new List<Borrower>();
 
         //initialize database
         public static void Init()
         {
-
+            //borrowers = new List<Borrower>();
+            borrowers.Add(new Borrower("Bogart", false, 0));
+            borrowers.Add(new Borrower("Mila", true, 0));
+            borrowers[0].borrow(1500);
+            borrowers[1].borrow(1600);
         }
 
         

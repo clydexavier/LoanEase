@@ -10,3 +10,15 @@ C:\Users\salar\Documents\LoanEase\LoanEase\obj\Debug\net6.0\LoanEase.dll
 C:\Users\salar\Documents\LoanEase\LoanEase\obj\Debug\net6.0\refint\LoanEase.dll
 C:\Users\salar\Documents\LoanEase\LoanEase\obj\Debug\net6.0\LoanEase.pdb
 C:\Users\salar\Documents\LoanEase\LoanEase\obj\Debug\net6.0\ref\LoanEase.dll
+D:\ACADS\BSCS-2\Second Sem\CSci 23 - Applications Development and Emerging Technologies\AppDev\LoanEase\bin\Debug\net6.0\LoanEase.deps.json
+D:\ACADS\BSCS-2\Second Sem\CSci 23 - Applications Development and Emerging Technologies\AppDev\LoanEase\bin\Debug\net6.0\LoanEase.dll
+D:\ACADS\BSCS-2\Second Sem\CSci 23 - Applications Development and Emerging Technologies\AppDev\LoanEase\bin\Debug\net6.0\LoanEase.pdb
+D:\ACADS\BSCS-2\Second Sem\CSci 23 - Applications Development and Emerging Technologies\AppDev\LoanEase\obj\Debug\net6.0\LoanEase.csproj.AssemblyReference.cache
+D:\ACADS\BSCS-2\Second Sem\CSci 23 - Applications Development and Emerging Technologies\AppDev\LoanEase\obj\Debug\net6.0\LoanEase.GeneratedMSBuildEditorConfig.editorconfig
+D:\ACADS\BSCS-2\Second Sem\CSci 23 - Applications Development and Emerging Technologies\AppDev\LoanEase\obj\Debug\net6.0\LoanEase.AssemblyInfoInputs.cache
+D:\ACADS\BSCS-2\Second Sem\CSci 23 - Applications Development and Emerging Technologies\AppDev\LoanEase\obj\Debug\net6.0\LoanEase.AssemblyInfo.cs
+D:\ACADS\BSCS-2\Second Sem\CSci 23 - Applications Development and Emerging Technologies\AppDev\LoanEase\obj\Debug\net6.0\LoanEase.csproj.CoreCompileInputs.cache
+D:\ACADS\BSCS-2\Second Sem\CSci 23 - Applications Development and Emerging Technologies\AppDev\LoanEase\obj\Debug\net6.0\LoanEase.dll
+D:\ACADS\BSCS-2\Second Sem\CSci 23 - Applications Development and Emerging Technologies\AppDev\LoanEase\obj\Debug\net6.0\refint\LoanEase.dll
+D:\ACADS\BSCS-2\Second Sem\CSci 23 - Applications Development and Emerging Technologies\AppDev\LoanEase\obj\Debug\net6.0\LoanEase.pdb
+D:\ACADS\BSCS-2\Second Sem\CSci 23 - Applications Development and Emerging Technologies\AppDev\LoanEase\obj\Debug\net6.0\ref\LoanEase.dll

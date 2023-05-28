@@ -2,14 +2,14 @@
 {
     public class Borrower
     {
-        private string name;
+        public string name;
         public bool isMember;
+        //name, is member, borrowed time, loan, monthly
+        public decimal loan;
+        public DateTime BorrowedTime;
+        public decimal monthlyInterest;
 
-        private decimal loan;
-        private DateTime BorrowedTime;
-        private decimal monthlyInterest;
-
-        public Borrower(string name, bool is_member, decimal loan)
+        public Borrower(string name, bool is_member, Decimal loan)
         {
             this.name = name;
             this.isMember = is_member;

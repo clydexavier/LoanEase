@@ -35,19 +35,23 @@
             this.TextBoxLastname = new System.Windows.Forms.TextBox();
             this.LabelLastName = new System.Windows.Forms.Label();
             this.LabelFirstName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TextBoxFirstName = new System.Windows.Forms.TextBox();
+            this.LabelIsMember = new System.Windows.Forms.Label();
+            this.ComboBoxIsMember = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.ComboBoxIsMember);
+            this.panel1.Controls.Add(this.LabelIsMember);
             this.panel1.Controls.Add(this.ButtonAdd);
             this.panel1.Controls.Add(this.TextBoxAmount);
             this.panel1.Controls.Add(this.LabelAmount);
             this.panel1.Controls.Add(this.TextBoxLastname);
             this.panel1.Controls.Add(this.LabelLastName);
             this.panel1.Controls.Add(this.LabelFirstName);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.TextBoxFirstName);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -60,8 +64,9 @@
             this.ButtonAdd.Name = "ButtonAdd";
             this.ButtonAdd.Size = new System.Drawing.Size(75, 23);
             this.ButtonAdd.TabIndex = 6;
-            this.ButtonAdd.Text = "Add Loan";
+            this.ButtonAdd.Text = "Add";
             this.ButtonAdd.UseVisualStyleBackColor = true;
+            this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
             // TextBoxAmount
             // 
@@ -110,15 +115,35 @@
             this.LabelFirstName.TabIndex = 1;
             this.LabelFirstName.Text = "First Name";
             // 
-            // textBox1
+            // TextBoxFirstName
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TextBoxFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(46, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 23);
-            this.textBox1.TabIndex = 0;
+            this.TextBoxFirstName.Location = new System.Drawing.Point(46, 67);
+            this.TextBoxFirstName.Name = "TextBoxFirstName";
+            this.TextBoxFirstName.Size = new System.Drawing.Size(195, 23);
+            this.TextBoxFirstName.TabIndex = 0;
+            // 
+            // LabelIsMember
+            // 
+            this.LabelIsMember.AutoSize = true;
+            this.LabelIsMember.Location = new System.Drawing.Point(304, 119);
+            this.LabelIsMember.Name = "LabelIsMember";
+            this.LabelIsMember.Size = new System.Drawing.Size(63, 15);
+            this.LabelIsMember.TabIndex = 7;
+            this.LabelIsMember.Text = "Is Member";
+            // 
+            // ComboBoxIsMember
+            // 
+            this.ComboBoxIsMember.FormattingEnabled = true;
+            this.ComboBoxIsMember.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.ComboBoxIsMember.Location = new System.Drawing.Point(304, 137);
+            this.ComboBoxIsMember.Name = "ComboBoxIsMember";
+            this.ComboBoxIsMember.Size = new System.Drawing.Size(121, 23);
+            this.ComboBoxIsMember.TabIndex = 8;
             // 
             // AddLoanForm
             // 
@@ -127,6 +152,7 @@
             this.ClientSize = new System.Drawing.Size(520, 368);
             this.Controls.Add(this.panel1);
             this.Name = "AddLoanForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddLoanForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -143,6 +169,8 @@
         private TextBox TextBoxLastname;
         private Label LabelLastName;
         private Label LabelFirstName;
-        private TextBox textBox1;
+        private TextBox TextBoxFirstName;
+        private ComboBox ComboBoxIsMember;
+        private Label LabelIsMember;
     }
 }

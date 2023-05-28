@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\salar\\Documents\\LoanEase\\LoanEase\\LoanEase.csproj",
+      "projectUniqueName": "D:\\ACADS\\BSCS-2\\Second Sem\\CSci 23 - Applications Development and Emerging Technologies\\AppDev\\LoanEase\\LoanEase.csproj",
       "projectName": "LoanEase",
-      "projectPath": "C:\\Users\\salar\\Documents\\LoanEase\\LoanEase\\LoanEase.csproj",
+      "projectPath": "D:\\ACADS\\BSCS-2\\Second Sem\\CSci 23 - Applications Development and Emerging Technologies\\AppDev\\LoanEase\\LoanEase.csproj",
       "packagesPath": "C:\\Users\\salar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\salar\\Documents\\LoanEase\\LoanEase\\obj\\",
+      "outputPath": "D:\\ACADS\\BSCS-2\\Second Sem\\CSci 23 - Applications Development and Emerging Technologies\\AppDev\\LoanEase\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\salar\\AppData\\Roaming\\NuGet\\NuGet.Config",
