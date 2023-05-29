@@ -13,6 +13,7 @@ namespace NewGUI
 {
     public partial class AddLoanForm : Form
     {
+        public event EventHandler AddLoan;
         public AddLoanForm()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace NewGUI
 
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(TextBoxFirstName.Text) || string.IsNullOrWhiteSpace(TextBoxLastname.Text) || string.IsNullOrWhiteSpace(TextBoxAmount.Text))
+            if(string.IsNullOrWhiteSpace(TextBoxFirstName.Text) || string.IsNullOrWhiteSpace(TextBoxLastname.Text) || string.IsNullOrWhiteSpace(TextBoxAmount.Text) || ComboBoxIsMember.SelectedIndex == -1)
             {
                 MessageBox.Show("Input all the empty fields.");
                 return;
@@ -34,6 +35,8 @@ namespace NewGUI
             }
             Borrower b = new Borrower(TextBoxFirstName.Text, isMember, amount);
             Database.borrowers.Add(b);
+
+            AddLoan?.Invoke(this, new EventArgs());
 
             this.Close();
         }

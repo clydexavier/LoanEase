@@ -133,6 +133,7 @@
             this.TextBoxSearch.Name = "TextBoxSearch";
             this.TextBoxSearch.Size = new System.Drawing.Size(660, 23);
             this.TextBoxSearch.TabIndex = 1;
+            this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
             // 
             // LabelBorrower
             // 

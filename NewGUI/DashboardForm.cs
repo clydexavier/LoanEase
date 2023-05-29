@@ -14,6 +14,8 @@ namespace NewGUI
 {
     public partial class DashboardForm : Form
     {
+
+        AddLoanForm child = new AddLoanForm();
         public DashboardForm()
         {
             InitializeComponent();
@@ -27,13 +29,12 @@ namespace NewGUI
             DataGridViewBorrowers.Columns.Add("Monthly Interest", "Monthly Interest");
 
             populateBorrowers();
+
+            child.AddLoan += Trigger_Populate;
             
-            //DataGridViewBorrowers.DataSource = Database.borrowers;
-            
-            //DataGridViewBorrowers.DataBind();
         }
 
-        public void populateBorrowers()
+        private void Trigger_Populate(object? sender, EventArgs e)
         {
             DataGridViewBorrowers.Rows.Clear();
             foreach (Borrower b in Database.borrowers)
@@ -42,9 +43,19 @@ namespace NewGUI
             }
         }
 
+        private void populateBorrowers()
+        {
+            DataGridViewBorrowers.Rows.Clear();
+            foreach (Borrower b in Database.borrowers)
+            {
+                DataGridViewBorrowers.Rows.Add(b.name, b.isMember.ToString(), b.BorrowedTime, b.loan, b.monthlyInterest);
+            }
+        }
+
+  
+
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            Form child = new AddLoanForm();
             child.Show();
             //this.Hide();
             
@@ -55,6 +66,34 @@ namespace NewGUI
         private void ButtonPay_Click(object sender, EventArgs e)
         {
             this.populateBorrowers();
+        }
+
+        private void TextBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            string search = TextBoxSearch.Text.ToLower();
+            DataGridViewBorrowers.ClearSelection(); //clear previous selections
+
+            foreach(DataGridViewRow row in DataGridViewBorrowers.Rows) 
+            {
+                string cellName = row.Cells[0].Value?.ToString().ToLower();
+
+                if (cellName != null && cellName.Contains(search))
+                {
+                    foreach(DataGridViewCell cell in row.Cells)
+                    {
+                        cell.Style.BackColor = Color.Yellow;
+                        cell.Style.ForeColor = Color.Black;
+                    }                   
+                }
+                else
+                {
+                    foreach(DataGridViewCell cell in row.Cells)
+                    {
+                        cell.Style.BackColor = DataGridViewBorrowers.DefaultCellStyle.BackColor;
+                        cell.Style.ForeColor = DataGridViewBorrowers.DefaultCellStyle.ForeColor;
+                    }
+                }
+            }
         }
     }
 }
