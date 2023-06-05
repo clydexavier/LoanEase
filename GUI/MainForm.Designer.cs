@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.HeadingContainer = new System.Windows.Forms.Panel();
-            this.MainPanel = new System.Windows.Forms.Panel();
             this.ButtonPanel = new System.Windows.Forms.Panel();
+            this.ButtonMembers = new System.Windows.Forms.Button();
+            this.ButtonLoans = new System.Windows.Forms.Button();
             this.ButtonSettings = new System.Windows.Forms.Button();
             this.ButtonExit = new System.Windows.Forms.Button();
-            this.BtnContestant = new System.Windows.Forms.Button();
+            this.ButtonHome = new System.Windows.Forms.Button();
+            this.MainPanel = new System.Windows.Forms.Panel();
             this.ButtonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,24 +48,54 @@
             this.HeadingContainer.Size = new System.Drawing.Size(1440, 77);
             this.HeadingContainer.TabIndex = 0;
             // 
-            // MainPanel
-            // 
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.MainPanel.Location = new System.Drawing.Point(300, 77);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1140, 947);
-            this.MainPanel.TabIndex = 2;
-            // 
             // ButtonPanel
             // 
+            this.ButtonPanel.Controls.Add(this.ButtonMembers);
+            this.ButtonPanel.Controls.Add(this.ButtonLoans);
             this.ButtonPanel.Controls.Add(this.ButtonSettings);
             this.ButtonPanel.Controls.Add(this.ButtonExit);
-            this.ButtonPanel.Controls.Add(this.BtnContestant);
-            this.ButtonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButtonPanel.Controls.Add(this.ButtonHome);
+            this.ButtonPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.ButtonPanel.Location = new System.Drawing.Point(0, 77);
             this.ButtonPanel.Name = "ButtonPanel";
-            this.ButtonPanel.Size = new System.Drawing.Size(300, 947);
+            this.ButtonPanel.Size = new System.Drawing.Size(300, 659);
             this.ButtonPanel.TabIndex = 3;
+            // 
+            // ButtonMembers
+            // 
+            this.ButtonMembers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(18)))), ((int)(((byte)(89)))));
+            this.ButtonMembers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ButtonMembers.FlatAppearance.BorderSize = 0;
+            this.ButtonMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonMembers.Image = global::GUI.Properties.Resources.woman;
+            this.ButtonMembers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonMembers.Location = new System.Drawing.Point(0, 130);
+            this.ButtonMembers.Name = "ButtonMembers";
+            this.ButtonMembers.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.ButtonMembers.Size = new System.Drawing.Size(300, 65);
+            this.ButtonMembers.TabIndex = 14;
+            this.ButtonMembers.Text = "Members";
+            this.ButtonMembers.UseVisualStyleBackColor = false;
+            this.ButtonMembers.Click += new System.EventHandler(this.ButtonMembers_Click);
+            // 
+            // ButtonLoans
+            // 
+            this.ButtonLoans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(18)))), ((int)(((byte)(89)))));
+            this.ButtonLoans.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ButtonLoans.FlatAppearance.BorderSize = 0;
+            this.ButtonLoans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonLoans.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonLoans.Image = global::GUI.Properties.Resources.loan;
+            this.ButtonLoans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonLoans.Location = new System.Drawing.Point(0, 65);
+            this.ButtonLoans.Name = "ButtonLoans";
+            this.ButtonLoans.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.ButtonLoans.Size = new System.Drawing.Size(300, 65);
+            this.ButtonLoans.TabIndex = 13;
+            this.ButtonLoans.Text = "Loans";
+            this.ButtonLoans.UseVisualStyleBackColor = false;
+            this.ButtonLoans.Click += new System.EventHandler(this.ButtonLoans_Click);
             // 
             // ButtonSettings
             // 
@@ -75,7 +107,7 @@
             this.ButtonSettings.ForeColor = System.Drawing.Color.Black;
             this.ButtonSettings.Image = global::GUI.Properties.Resources.browser;
             this.ButtonSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSettings.Location = new System.Drawing.Point(0, 817);
+            this.ButtonSettings.Location = new System.Drawing.Point(0, 529);
             this.ButtonSettings.Name = "ButtonSettings";
             this.ButtonSettings.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.ButtonSettings.Size = new System.Drawing.Size(300, 65);
@@ -93,7 +125,7 @@
             this.ButtonExit.ForeColor = System.Drawing.Color.Black;
             this.ButtonExit.Image = global::GUI.Properties.Resources.logout;
             this.ButtonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonExit.Location = new System.Drawing.Point(0, 882);
+            this.ButtonExit.Location = new System.Drawing.Point(0, 594);
             this.ButtonExit.Name = "ButtonExit";
             this.ButtonExit.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.ButtonExit.Size = new System.Drawing.Size(300, 65);
@@ -102,31 +134,41 @@
             this.ButtonExit.UseVisualStyleBackColor = false;
             this.ButtonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
-            // BtnContestant
+            // ButtonHome
             // 
-            this.BtnContestant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(18)))), ((int)(((byte)(89)))));
-            this.BtnContestant.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnContestant.FlatAppearance.BorderSize = 0;
-            this.BtnContestant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnContestant.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnContestant.Image = global::GUI.Properties.Resources.woman;
-            this.BtnContestant.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnContestant.Location = new System.Drawing.Point(0, 0);
-            this.BtnContestant.Name = "BtnContestant";
-            this.BtnContestant.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.BtnContestant.Size = new System.Drawing.Size(300, 65);
-            this.BtnContestant.TabIndex = 8;
-            this.BtnContestant.Text = "Borrowers";
-            this.BtnContestant.UseVisualStyleBackColor = false;
+            this.ButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(18)))), ((int)(((byte)(89)))));
+            this.ButtonHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ButtonHome.FlatAppearance.BorderSize = 0;
+            this.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonHome.Image = global::GUI.Properties.Resources.home__1_;
+            this.ButtonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonHome.Location = new System.Drawing.Point(0, 0);
+            this.ButtonHome.Name = "ButtonHome";
+            this.ButtonHome.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.ButtonHome.Size = new System.Drawing.Size(300, 65);
+            this.ButtonHome.TabIndex = 8;
+            this.ButtonHome.Text = "Home\r\n";
+            this.ButtonHome.UseVisualStyleBackColor = false;
+            this.ButtonHome.Click += new System.EventHandler(this.ButtonHome_Click);
+            this.ButtonHome.MouseEnter += new System.EventHandler(this.ButtonHome_MouseEnter);
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(300, 77);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(1140, 659);
+            this.MainPanel.TabIndex = 4;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1440, 1024);
-            this.Controls.Add(this.ButtonPanel);
+            this.ClientSize = new System.Drawing.Size(1440, 736);
             this.Controls.Add(this.MainPanel);
+            this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.HeadingContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
@@ -141,10 +183,12 @@
         #endregion
 
         private Panel HeadingContainer;
-        private Panel MainPanel;
         private Panel ButtonPanel;
         private Button ButtonSettings;
         private Button ButtonExit;
-        private Button BtnContestant;
+        private Button ButtonHome;
+        private Button ButtonMembers;
+        private Button ButtonLoans;
+        private Panel MainPanel;
     }
 }

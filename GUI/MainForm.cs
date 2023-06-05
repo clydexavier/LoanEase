@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoanEase;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,15 @@ namespace GUI
     public partial class MainForm : Form
     {
         private LoginForm loginForm;
+
+        private static BorrowerForm borrowerForm = new BorrowerForm();
+        private static HomeForm homeForm = new HomeForm();
+        private static MembersForm membersForm = new MembersForm();
+        
+        Form? ActiveForm;
         public MainForm(LoginForm parent)
         {
+            Database.Init();
             this.loginForm = parent;
             InitializeComponent();
         }
@@ -23,6 +31,48 @@ namespace GUI
         {
             this.Close();
             loginForm.Show();
+        }
+
+        private void ButtonHome_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveForm != null)
+            {
+                this.ActiveForm.Hide();
+                this.ActiveForm = homeForm;
+            }
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(homeForm);
+            homeForm.Show();
+        }
+
+        private void ButtonHome_MouseEnter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ButtonMembers_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveForm != null)
+            {
+                this.ActiveForm.Hide();
+                this.ActiveForm = membersForm;
+            }
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(membersForm);
+            membersForm.Show();
+
+        }
+
+        private void ButtonLoans_Click(object sender, EventArgs e)
+        {
+            if(this.ActiveForm!= null) 
+            {
+                this.ActiveForm.Hide();
+                this.ActiveForm = borrowerForm;
+            }
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(borrowerForm);
+            borrowerForm.Show();
         }
     }
 }
