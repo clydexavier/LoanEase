@@ -13,20 +13,27 @@ namespace GUI
 {
     public partial class BorrowerForm : Form
     {
+        public static AddBorrowerForm addBorrowerForm = new AddBorrowerForm();
         public BorrowerForm()
         {
             InitializeComponent();
             this.TopLevel = false;
             this.Dock = DockStyle.Fill;
-            foreach(Borrower b in Database.borrowers)
+            foreach (Borrower b in Database.borrowers)
             {
-                this.DGVBorrowers.Rows.Add(b.name, b.isMember? "Yes": "No", b.BorrowedTime.ToString("MMMM d, yyyy"), "PHP "+ b.loan.ToString("0.00"), "PHP " + b.monthlyInterest.ToString("0.00"));
+                this.DGVBorrowers.Rows.Add(b.name, b.isMember ? "Yes" : "No", b.BorrowedTime.ToString("MMMM d, yyyy"), "PHP " + b.loan.ToString("0.00"), "PHP " + b.monthlyInterest.ToString("0.00"));
             }
+
+            for (int i = 0; i < 20; i++)
+            {
+                this.DGVBorrowers.Rows.Add("Jay", "HEY", "Hey", "HEK", "Hok");
+            }
+
         }
 
         private void ButtonAddBorrower_Click(object sender, EventArgs e)
         {
-            
+            addBorrowerForm.Show();
            
         }
 

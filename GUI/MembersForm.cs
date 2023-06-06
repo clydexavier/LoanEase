@@ -13,6 +13,7 @@ namespace GUI
 {
     public partial class MembersForm : Form
     {
+        private static AddMemberForm addMemberForm = new AddMemberForm();
         public MembersForm()
         {
             InitializeComponent();
@@ -48,6 +49,7 @@ namespace GUI
 
         private void ButtonAddMember_Click(object sender, EventArgs e)
         {
+            addMemberForm.Show();
 
         }
     }
