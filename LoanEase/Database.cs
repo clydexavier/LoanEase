@@ -16,8 +16,8 @@ namespace LoanEase
         public static void Init()
         {
             //borrowers = new List<Borrower>();
-            borrowers.Add(new Borrower("Bogart", false, 0));
-            borrowers.Add(new Borrower("Mila", true, 0));
+            borrowers.Add(new Borrower("Bogart", "Ignacio",false, 0));
+            borrowers.Add(new Borrower("Mila","Makatigbak", true, 0));
             borrowers[0].borrow(1500);
             borrowers[1].borrow(1600);
         }

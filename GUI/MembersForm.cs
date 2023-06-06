@@ -23,7 +23,7 @@ namespace GUI
             {
                 if (!b.isMember) continue;
 
-                this.DGVMembers.Rows.Add(b.name, b.BorrowedTime.ToString("MMMM d, yyyy"), "PHP " + b.loan.ToString("0.00"), "PHP " + b.monthlyInterest.ToString("0.00"));
+                this.DGVMembers.Rows.Add(b.FirstName + " " + b.LastName, b.BorrowedTime.ToString("MMMM d, yyyy"), "PHP " + b.loan.ToString("0.00"), "PHP " + b.monthlyInterest.ToString("0.00"));
             }
         }
 
@@ -51,6 +51,17 @@ namespace GUI
         {
             addMemberForm.Show();
 
+        }
+
+        private void DGVMembers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            if (e.ColumnIndex == 4)
+            {
+                MessageBox.Show("Click Edit\n" + DGVMembers.Rows[e.RowIndex].Cells[0].Value);
+            }
+            
         }
     }
 }

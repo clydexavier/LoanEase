@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoanEase;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,29 +11,30 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class AddBorrowerForm : Form
+    public partial class BorrowerEditForm : Form
     {
-        public AddBorrowerForm()
+        private Borrower selectedBorrower;
+        public BorrowerEditForm()
         {
             InitializeComponent();
-            this.ComboBoxIsMember.SelectedIndex = 1;
-           
+            foreach(Borrower b in Database.borrowers)
+            {
+                
+            }
         }
 
         private void ButtonConfirm_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
             this.Reset();
             this.Hide();
+
         }
 
         private void Reset()
         {
-            TextBoxFirstname.Text= string.Empty;
-            TextBoxLastname.Text= string.Empty;
-            TextBoxAmount.Text= string.Empty;
-            this.ComboBoxIsMember.SelectedIndex = 1;
+            this.TextBoxFirstname.Text = string.Empty;
+            this.TextBoxLastname.Text = string.Empty;
+            this.ComboBoxIsMember.SelectedIndex = -1;
         }
-
     }
 }

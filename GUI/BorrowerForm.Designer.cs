@@ -137,10 +137,12 @@
             this.DGVBorrowers.ShowRowErrors = false;
             this.DGVBorrowers.Size = new System.Drawing.Size(1052, 363);
             this.DGVBorrowers.TabIndex = 1;
+            this.DGVBorrowers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVBorrowers_CellClick);
             this.DGVBorrowers.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DGVBorrowers_CellPainting);
             // 
             // ColumnName
             // 
+            this.ColumnName.DataPropertyName = "Borrower.Name";
             this.ColumnName.FillWeight = 94.86185F;
             this.ColumnName.HeaderText = "Name";
             this.ColumnName.Name = "ColumnName";

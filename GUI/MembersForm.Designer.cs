@@ -96,6 +96,7 @@
             this.DGVMembers.ShowRowErrors = false;
             this.DGVMembers.Size = new System.Drawing.Size(1052, 363);
             this.DGVMembers.TabIndex = 3;
+            this.DGVMembers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVMembers_CellClick);
             this.DGVMembers.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DGVMembers_CellPainting);
             // 
             // ColumnName

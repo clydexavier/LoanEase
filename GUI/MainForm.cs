@@ -29,7 +29,7 @@ namespace GUI
 
         private void ButtonExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             loginForm.Show();
         }
 

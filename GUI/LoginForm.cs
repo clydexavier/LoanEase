@@ -4,18 +4,18 @@ namespace GUI
 {
     public partial class LoginForm : Form
     {
-        
+        public static MainForm mainForm;
         public LoginForm()
         {
             InitializeComponent();
+            mainForm = new MainForm(this);
 
             
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            MainForm admin = new MainForm(this);
-            admin.Show();
+            mainForm.Show();
             this.Hide();
         }
 

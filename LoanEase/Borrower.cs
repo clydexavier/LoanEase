@@ -1,17 +1,21 @@
-﻿namespace LoanEase
+﻿using System.Runtime.CompilerServices;
+
+namespace LoanEase
 {
     public class Borrower
     {
-        public string name;
+        public string FirstName;
+        public string LastName;
         public bool isMember;
         //name, is member, borrowed time, loan, monthly
         public decimal loan;
         public DateTime BorrowedTime;
         public decimal monthlyInterest;
 
-        public Borrower(string name, bool is_member, Decimal loan)
+        public Borrower(string first_name, string last_name, bool is_member, Decimal loan)
         {
-            this.name = name;
+            this.FirstName = first_name;
+            this.LastName = last_name;
             this.isMember = is_member;
             this.loan = loan;
             this.BorrowedTime = default(DateTime);
@@ -37,5 +41,7 @@
             this.loan = Calculate.Pay(this.loan, amount);
             return true;
         }
+       
+
     }
 }
