@@ -16,22 +16,26 @@ namespace GUI
         
         //Forms
         public static BorrowerAddForm addBorrowerForm = new BorrowerAddForm();
-        public static BorrowerEditForm editBorrowerForm = new BorrowerEditForm();
+        public static BorrowerEditForm editBorrowerForm;
+
+        //
+        public Borrower? selectedBorrower;
 
         public BorrowerForm()
         {
             InitializeComponent();
             this.TopLevel = false;
             this.Dock = DockStyle.Fill;
+            editBorrowerForm = new BorrowerEditForm(this);
             
 
             this.PopulateDataGrid();
 
-            addBorrowerForm.AddBorrower += Add_PopulateDataGrid;
-
+            addBorrowerForm.AddBorrower += Refresh_PopulateDataGrid;
+            editBorrowerForm.EditBorrower += Refresh_PopulateDataGrid;
         }
 
-        private void Add_PopulateDataGrid(object? sender, EventArgs e)
+        private void Refresh_PopulateDataGrid(object? sender, EventArgs e)
         {
             this.DGVBorrowers.Rows.Clear();
             foreach (Borrower b in Database.borrowers)
@@ -94,11 +98,28 @@ namespace GUI
 
             if(e.ColumnIndex == 5)
             {
+                
                 string[] name = DGVBorrowers.Rows[e.RowIndex].Cells[0].Value.ToString().Split(' ');
+                
+                //Attributes of the borrower you want to edit
+                string firstName = string.Join(" ", name, 0, name.Length - 1);
+                string lastName = name[name.Length - 1];
+                bool isMember = DGVBorrowers.Rows[e.RowIndex].Cells[3].Value.ToString() == "Member";
 
-                editBorrowerForm.TextBoxFirstname.Text = string.Join(" ", name, 0, name.Length - 1);
-                editBorrowerForm.TextBoxLastname.Text = name[name.Length - 1];
-                editBorrowerForm.ComboBoxIsMember.SelectedIndex = DGVBorrowers.Rows[e.RowIndex].Cells[3].Value.ToString() == "Member"? 0: 1;
+                //Search the borrower object
+                foreach (var b in Database.borrowers)
+                {
+                    if (!firstName.Equals(b.FirstName) || !lastName.Equals(b.LastName) || !isMember == b.isMember) continue;
+                    selectedBorrower = b;
+                    break;
+                }
+
+                //Initial values of the edit form.
+                //Attributes of the borrower you want to edit
+                editBorrowerForm.TextBoxFirstname.Text = selectedBorrower.FirstName;
+                editBorrowerForm.TextBoxLastname.Text = selectedBorrower.LastName;
+                editBorrowerForm.ComboBoxIsMember.SelectedIndex = selectedBorrower.isMember ? 0: 1;
+                
                 editBorrowerForm.Show();
             }
             else if (e.ColumnIndex == 6) 

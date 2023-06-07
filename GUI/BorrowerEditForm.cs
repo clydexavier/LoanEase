@@ -13,21 +13,27 @@ namespace GUI
 {
     public partial class BorrowerEditForm : Form
     {
-        private Borrower selectedBorrower;
-        public BorrowerEditForm()
+
+        private BorrowerForm ParentForm;
+        public event EventHandler? EditBorrower;
+        public BorrowerEditForm(BorrowerForm parentForm)
         {
+            this.ParentForm = parentForm;
             InitializeComponent();
-            foreach(Borrower b in Database.borrowers)
-            {
-                
-            }
         }
 
         private void ButtonConfirm_Click(object sender, EventArgs e)
         {
+            this.ParentForm.selectedBorrower.FirstName = TextBoxFirstname.Text;
+            this.ParentForm.selectedBorrower.LastName = TextBoxLastname.Text;
+            this.ParentForm.selectedBorrower.isMember = ComboBoxIsMember.SelectedIndex == 0 ? true : false;
+            
+            //Comunicated the edit event to the parent form
+            //DataGridView will be refreshed with the new value of the edited borrower
+            EditBorrower?.Invoke(this, new EventArgs());
+
             this.Reset();
             this.Hide();
-
         }
 
         private void Reset()

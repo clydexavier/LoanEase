@@ -41,7 +41,7 @@ namespace LoanEase
             this.loan = Calculate.Pay(this.loan, amount);
             return true;
         }
-       
+
 
     }
 }
