@@ -10,16 +10,18 @@ namespace LoanEase
         //name, is member, borrowed time, loan, monthly
         public decimal loan;
         public DateTime BorrowedTime;
+        public DateTime? PayedTime;
         public decimal monthlyInterest;
 
-        public Borrower(string first_name, string last_name, bool is_member, Decimal loan)
+        public Borrower(string first_name, string last_name, bool is_member, decimal loan)
         {
             this.FirstName = first_name;
             this.LastName = last_name;
             this.isMember = is_member;
-            this.loan = loan;
-            this.BorrowedTime = default(DateTime);
-            this.monthlyInterest = 0;
+            
+            this.BorrowedTime = DateTime.Now;
+            this.monthlyInterest = Calculate.MonthlyInterest(isMember, loan);
+            this.loan = loan + monthlyInterest;
         }
 
         public bool borrow(decimal amount)
@@ -27,19 +29,25 @@ namespace LoanEase
             //borrower can't borrow if they still have current loan to pay
             if (this.loan > 0) return false;
 
-            this.monthlyInterest = Calculate.MonthlyInterest(amount, this.isMember);
+            this.monthlyInterest = Calculate.MonthlyInterest(this.isMember, amount);
             this.BorrowedTime = DateTime.Now;
-            this.loan = Calculate.Loan(amount, this.isMember);
+            this.loan = Calculate.Loan(this.isMember, amount);
    
             return true;
         }
-        public bool pay(decimal amount)
+        public bool pay(decimal amount_payed)
         {
             //borrower can't pay if they don't have a loan
             if (this.loan <= 0) return false;
 
-            this.loan = Calculate.Pay(this.loan, amount);
+            this.loan = Calculate.Pay(this.loan, amount_payed);
+            if(this.loan == 0) PayedTime = DateTime.Now;
             return true;
+        }
+
+        public override string ToString()
+        {
+            return this.FirstName + " " + this.LastName;
         }
 
 

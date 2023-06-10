@@ -49,8 +49,9 @@ namespace GUI
 
         private void ButtonAddMember_Click(object sender, EventArgs e)
         {
-            addMemberForm.Show();
-
+            DisableControls(this);
+            addMemberForm.ShowDialog();
+            EnableControls(this);
         }
 
         private void DGVMembers_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -62,6 +63,34 @@ namespace GUI
                 MessageBox.Show("Click Edit\n" + DGVMembers.Rows[e.RowIndex].Cells[0].Value);
             }
             
+        }
+
+        private void EnableControls(Control container)
+        {
+            foreach (Control control in container.Controls)
+            {
+                control.Enabled = true;
+
+                // If the control is a container, enable its child controls recursively
+                if (control.HasChildren)
+                {
+                    EnableControls(control);
+                }
+            }
+        }
+
+        private void DisableControls(Control container)
+        {
+            foreach (Control control in container.Controls)
+            {
+                control.Enabled = false;
+
+                // If the control is a container, disable its child controls recursively
+                if (control.HasChildren)
+                {
+                    DisableControls(control);
+                }
+            }
         }
     }
 }

@@ -36,6 +36,7 @@
             this.ButtonExit = new System.Windows.Forms.Button();
             this.ButtonHome = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.ButtonHistory = new System.Windows.Forms.Button();
             this.ButtonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +51,7 @@
             // 
             // ButtonPanel
             // 
+            this.ButtonPanel.Controls.Add(this.ButtonHistory);
             this.ButtonPanel.Controls.Add(this.ButtonMembers);
             this.ButtonPanel.Controls.Add(this.ButtonLoans);
             this.ButtonPanel.Controls.Add(this.ButtonSettings);
@@ -161,6 +163,24 @@
             this.MainPanel.Size = new System.Drawing.Size(1140, 659);
             this.MainPanel.TabIndex = 4;
             // 
+            // ButtonHistory
+            // 
+            this.ButtonHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(18)))), ((int)(((byte)(89)))));
+            this.ButtonHistory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ButtonHistory.FlatAppearance.BorderSize = 0;
+            this.ButtonHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonHistory.Image = global::GUI.Properties.Resources.history;
+            this.ButtonHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonHistory.Location = new System.Drawing.Point(0, 195);
+            this.ButtonHistory.Name = "ButtonHistory";
+            this.ButtonHistory.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.ButtonHistory.Size = new System.Drawing.Size(300, 65);
+            this.ButtonHistory.TabIndex = 15;
+            this.ButtonHistory.Text = "History";
+            this.ButtonHistory.UseVisualStyleBackColor = false;
+            this.ButtonHistory.Click += new System.EventHandler(this.ButtonHistory_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -190,5 +210,6 @@
         private Button ButtonMembers;
         private Button ButtonLoans;
         private Panel MainPanel;
+        private Button ButtonHistory;
     }
 }

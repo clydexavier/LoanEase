@@ -24,14 +24,12 @@ namespace GUI
 
         private void ButtonConfirm_Click(object sender, EventArgs e)
         {
-            Decimal amount;
+            decimal amount;
             if(!decimal.TryParse(TextBoxAmount.Text, out amount)) 
             {
                 MessageBox.Show("Invalid input");
             }
-
             Borrower b = new Borrower(TextBoxFirstname.Text, TextBoxLastname.Text, ComboBoxIsMember.SelectedIndex == 0, amount);
-
             Database.borrowers.Add(b);
             this.DialogResult = DialogResult.OK;
             AddBorrower?.Invoke(this, new EventArgs());

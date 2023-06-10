@@ -11,6 +11,8 @@ namespace LoanEase
     {
         public static List<Lender> lenders;
         public static List<Borrower> borrowers = new List<Borrower>();
+        public static List<Borrower> payed_borrowers = new List<Borrower>();
+        public static List<Payment> Payments = new List<Payment>(); 
 
         //initialize database
         public static void Init()

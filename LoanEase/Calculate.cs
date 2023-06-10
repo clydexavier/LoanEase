@@ -12,29 +12,32 @@ namespace LoanEase
         public const decimal member_interest = 0.03M;       // 3% interest for members
         public const decimal non_member_interest = 0.05M;   // 5% interest for non-members
 
-        public static decimal Loan(decimal amount, bool is_member)
+        public static decimal Loan(bool isMember, decimal amount)
         {
             decimal total = amount;
 
-            if(is_member)
-                total = total + (total * member_interest);
+            if(isMember)
+                return total = total + (total * member_interest);
 
-            total = total + (total * non_member_interest);
-            return total;
+            return total = total + (total * non_member_interest);
+            
         }
 
-        public static decimal MonthlyInterest(decimal amount, bool is_member) 
+        public static decimal MonthlyInterest(bool isMember, decimal amount) 
         {
-            if(is_member)
+            if(isMember)
                 return amount * member_interest;
 
             return amount * non_member_interest;
         }
 
-        public static decimal Pay(decimal current_loan, decimal amount) 
+        public static decimal Pay(decimal loan, decimal amount_payed) 
         {
          
-            return current_loan - amount;
+            if(loan > amount_payed) return loan - amount_payed;
+
+            return 0;
+
         }
     }
 

@@ -63,8 +63,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonAddBorrower.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(18)))), ((int)(((byte)(89)))));
+            this.ButtonAddBorrower.FlatAppearance.BorderSize = 0;
             this.ButtonAddBorrower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonAddBorrower.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ButtonAddBorrower.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ButtonAddBorrower.Location = new System.Drawing.Point(945, 72);
             this.ButtonAddBorrower.Name = "ButtonAddBorrower";
             this.ButtonAddBorrower.Size = new System.Drawing.Size(140, 28);

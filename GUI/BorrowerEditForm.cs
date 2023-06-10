@@ -32,7 +32,9 @@ namespace GUI
             //DataGridView will be refreshed with the new value of the edited borrower
             EditBorrower?.Invoke(this, new EventArgs());
 
+            this.DialogResult = DialogResult.OK;
             this.Reset();
+
             this.Hide();
         }
 
