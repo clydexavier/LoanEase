@@ -43,6 +43,7 @@
             this.MonthlyInterst = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EditButton = new System.Windows.Forms.DataGridViewButtonColumn();
             this.PayButton = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.TextBoxSearch = new System.Windows.Forms.TextBox();
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVBorrowers)).BeginInit();
             this.SuspendLayout();
@@ -204,12 +205,23 @@
             this.PayButton.Text = "pay";
             this.PayButton.Width = 80;
             // 
+            // TextBoxSearch
+            // 
+            this.TextBoxSearch.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TextBoxSearch.Location = new System.Drawing.Point(33, 103);
+            this.TextBoxSearch.Name = "TextBoxSearch";
+            this.TextBoxSearch.PlaceholderText = "Search Borrower";
+            this.TextBoxSearch.Size = new System.Drawing.Size(246, 26);
+            this.TextBoxSearch.TabIndex = 3;
+            this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
+            // 
             // BorrowerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1124, 530);
             this.ControlBox = false;
+            this.Controls.Add(this.TextBoxSearch);
             this.Controls.Add(this.DGVBorrowers);
             this.Controls.Add(this.PanelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -224,6 +236,7 @@
             this.PanelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVBorrowers)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -240,5 +253,6 @@
         private DataGridViewTextBoxColumn MonthlyInterst;
         private DataGridViewButtonColumn EditButton;
         private DataGridViewButtonColumn PayButton;
+        private TextBox TextBoxSearch;
     }
 }

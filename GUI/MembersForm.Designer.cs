@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DGVMembers = new System.Windows.Forms.DataGridView();
-            this.PanelTop = new System.Windows.Forms.Panel();
-            this.ButtonAddMember = new System.Windows.Forms.Button();
-            this.LabelMembers = new System.Windows.Forms.Label();
             this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateBorrowed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MonthlyInterst = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PanelTop = new System.Windows.Forms.Panel();
+            this.ButtonAddMember = new System.Windows.Forms.Button();
+            this.LabelMembers = new System.Windows.Forms.Label();
+            this.TextBoxSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVMembers)).BeginInit();
             this.PanelTop.SuspendLayout();
             this.SuspendLayout();
@@ -56,14 +57,14 @@
             this.DGVMembers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVMembers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DGVMembers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DGVMembers.ColumnHeadersHeight = 50;
             this.DGVMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGVMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -71,14 +72,14 @@
             this.DateBorrowed,
             this.Amount,
             this.MonthlyInterst});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVMembers.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVMembers.DefaultCellStyle = dataGridViewCellStyle6;
             this.DGVMembers.EnableHeadersVisualStyles = false;
             this.DGVMembers.Location = new System.Drawing.Point(33, 132);
             this.DGVMembers.Margin = new System.Windows.Forms.Padding(0);
@@ -95,6 +96,35 @@
             this.DGVMembers.TabIndex = 3;
             this.DGVMembers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVMembers_CellClick);
             this.DGVMembers.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DGVMembers_CellPainting);
+            // 
+            // ColumnName
+            // 
+            this.ColumnName.FillWeight = 94.86185F;
+            this.ColumnName.HeaderText = "Name";
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.ReadOnly = true;
+            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // DateBorrowed
+            // 
+            this.DateBorrowed.FillWeight = 94.86185F;
+            this.DateBorrowed.HeaderText = "Date Borrowed";
+            this.DateBorrowed.Name = "DateBorrowed";
+            this.DateBorrowed.ReadOnly = true;
+            // 
+            // Amount
+            // 
+            this.Amount.FillWeight = 94.86185F;
+            this.Amount.HeaderText = "Amount";
+            this.Amount.Name = "Amount";
+            this.Amount.ReadOnly = true;
+            // 
+            // MonthlyInterst
+            // 
+            this.MonthlyInterst.FillWeight = 94.86185F;
+            this.MonthlyInterst.HeaderText = "Monthly Interest";
+            this.MonthlyInterst.Name = "MonthlyInterst";
+            this.MonthlyInterst.ReadOnly = true;
             // 
             // PanelTop
             // 
@@ -132,34 +162,15 @@
             this.LabelMembers.TabIndex = 0;
             this.LabelMembers.Text = "Members";
             // 
-            // ColumnName
+            // TextBoxSearch
             // 
-            this.ColumnName.FillWeight = 94.86185F;
-            this.ColumnName.HeaderText = "Name";
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.ReadOnly = true;
-            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // DateBorrowed
-            // 
-            this.DateBorrowed.FillWeight = 94.86185F;
-            this.DateBorrowed.HeaderText = "Date Borrowed";
-            this.DateBorrowed.Name = "DateBorrowed";
-            this.DateBorrowed.ReadOnly = true;
-            // 
-            // Amount
-            // 
-            this.Amount.FillWeight = 94.86185F;
-            this.Amount.HeaderText = "Amount";
-            this.Amount.Name = "Amount";
-            this.Amount.ReadOnly = true;
-            // 
-            // MonthlyInterst
-            // 
-            this.MonthlyInterst.FillWeight = 94.86185F;
-            this.MonthlyInterst.HeaderText = "Monthly Interest";
-            this.MonthlyInterst.Name = "MonthlyInterst";
-            this.MonthlyInterst.ReadOnly = true;
+            this.TextBoxSearch.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TextBoxSearch.Location = new System.Drawing.Point(33, 103);
+            this.TextBoxSearch.Name = "TextBoxSearch";
+            this.TextBoxSearch.PlaceholderText = "Search Member";
+            this.TextBoxSearch.Size = new System.Drawing.Size(246, 26);
+            this.TextBoxSearch.TabIndex = 4;
+            this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
             // 
             // MembersForm
             // 
@@ -167,6 +178,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1124, 530);
             this.ControlBox = false;
+            this.Controls.Add(this.TextBoxSearch);
             this.Controls.Add(this.DGVMembers);
             this.Controls.Add(this.PanelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -177,6 +189,7 @@
             this.PanelTop.ResumeLayout(false);
             this.PanelTop.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -190,5 +203,6 @@
         private DataGridViewTextBoxColumn DateBorrowed;
         private DataGridViewTextBoxColumn Amount;
         private DataGridViewTextBoxColumn MonthlyInterst;
+        private TextBox TextBoxSearch;
     }
 }

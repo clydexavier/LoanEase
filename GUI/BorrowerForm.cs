@@ -177,6 +177,19 @@ namespace GUI
             }
         }
 
-       
+        private void TextBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchString = TextBoxSearch.Text.ToLower();
+            DGVBorrowers.Rows.Clear();
+            foreach (Borrower b in Database.borrowers)
+            {
+                if(b.FirstName.ToLower().Contains(searchString) || b.LastName.ToLower().Contains(searchString))
+                {
+                    this.DGVBorrowers.Rows.Add(b.FirstName + " " + b.LastName, b.isMember ? "Yes" : "No", b.BorrowedTime.ToString("MMMM d, yyyy"), "PHP " + b.loan.ToString("0.00"), "PHP " + b.monthlyInterest.ToString("0.00"));
+                }
+                
+            }
+
+        }
     }
 }
