@@ -30,6 +30,7 @@ namespace GUI
 
         private void ButtonExit_Click(object sender, EventArgs e)
         {
+            Database.Save();
             this.Hide();
             loginForm.Show();
         }

@@ -61,7 +61,6 @@ namespace GUI
 
             if (SelectedBorrower.loan <= 0)
             {
-                Database.payed_borrowers.Add(SelectedBorrower);
                 Database.borrowers.Remove(SelectedBorrower);
                 SelectedBorrower = null;
             }

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "b/Tiw9vsredV/hXe0P4+4lbhqwkOheO5dRflrMoQ1WA2qRVD8ZPvPyF2RAIHnMJk7sQdHqC8/CYjaEWGBW6Jkg==",
+  "dgSpecHash": "kKRchQ2F/d2CM3RNX99cLWhDv0csZueqG7dSMKG7TmbNz/ji6Am5X+0EcehUHT2U0vWgltjNbsG10wjuM/xn+w==",
   "success": true,
   "projectFilePath": "D:\\ACADS\\BSCS-2\\Second Sem\\CSci 23 - Applications Development and Emerging Technologies\\AppDev\\LoanEase\\LoanEase.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\salar\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

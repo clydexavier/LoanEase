@@ -1,20 +1,29 @@
+using LoanEase;
+using System.Diagnostics;
 using System.Net.Http.Headers;
+using BCryptNet = BCrypt.Net.BCrypt;
 
 namespace GUI
 {
     public partial class LoginForm : Form
     {
         public static MainForm mainForm;
+
         public LoginForm()
         {
             InitializeComponent();
             mainForm = new MainForm(this);
-
-            
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+            if(UsernameTextBox.Text != Database.Lender.username || !VerifyPassword(PasswordTextBox.Text, Database.Lender.password))
+            {
+                MessageBox.Show("Invalid username and password.");
+                return;
+            }
+            this.UsernameTextBox.Text = string.Empty;
+            this.PasswordTextBox.Text = string.Empty;
             mainForm.Show();
             this.Hide();
         }
@@ -27,6 +36,22 @@ namespace GUI
         private void ButtonExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private string HashPassword(string password)
+        {
+            string salt = BCryptNet.GenerateSalt();
+            string hashedPassword = BCryptNet.HashPassword(password, salt);
+
+            return hashedPassword;
+
+        }
+
+        private bool VerifyPassword(string password, string hashedPassword)
+        {
+            // Check if the provided password matches the stored hashed password
+            bool isPasswordValid = BCryptNet.Verify(password, hashedPassword);
+            return isPasswordValid;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +9,13 @@ namespace LoanEase
 {
     public class Lender
     {
-        private string name;
-        private string username;
-        private string password;
+        [JsonRequired]
+        public  string username;
+        [JsonRequired]
+        public string password;
 
-        public Lender(string name, string username, string password)
+        public Lender(string username, string password)
         {
-            this.name = name;
             this.username = username;
             this.password = password;
         }
