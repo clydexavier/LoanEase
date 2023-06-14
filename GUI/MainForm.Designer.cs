@@ -30,20 +30,21 @@
         {
             this.HeadingContainer = new System.Windows.Forms.Panel();
             this.ButtonPanel = new System.Windows.Forms.Panel();
+            this.ButtonHistory = new System.Windows.Forms.Button();
             this.ButtonMembers = new System.Windows.Forms.Button();
             this.ButtonLoans = new System.Windows.Forms.Button();
             this.ButtonSettings = new System.Windows.Forms.Button();
             this.ButtonExit = new System.Windows.Forms.Button();
             this.ButtonHome = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.ButtonHistory = new System.Windows.Forms.Button();
             this.ButtonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // HeadingContainer
             // 
-            this.HeadingContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(78)))), ((int)(((byte)(92)))));
+            this.HeadingContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(61)))), ((int)(((byte)(142)))));
             this.HeadingContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HeadingContainer.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.HeadingContainer.Location = new System.Drawing.Point(0, 0);
             this.HeadingContainer.Name = "HeadingContainer";
             this.HeadingContainer.Size = new System.Drawing.Size(1440, 77);
@@ -51,6 +52,7 @@
             // 
             // ButtonPanel
             // 
+            this.ButtonPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.ButtonPanel.Controls.Add(this.ButtonHistory);
             this.ButtonPanel.Controls.Add(this.ButtonMembers);
             this.ButtonPanel.Controls.Add(this.ButtonLoans);
@@ -63,14 +65,34 @@
             this.ButtonPanel.Size = new System.Drawing.Size(300, 659);
             this.ButtonPanel.TabIndex = 3;
             // 
+            // ButtonHistory
+            // 
+            this.ButtonHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
+            this.ButtonHistory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ButtonHistory.FlatAppearance.BorderSize = 0;
+            this.ButtonHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonHistory.ForeColor = System.Drawing.Color.White;
+            this.ButtonHistory.Image = global::GUI.Properties.Resources.history_white;
+            this.ButtonHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonHistory.Location = new System.Drawing.Point(0, 195);
+            this.ButtonHistory.Name = "ButtonHistory";
+            this.ButtonHistory.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.ButtonHistory.Size = new System.Drawing.Size(300, 65);
+            this.ButtonHistory.TabIndex = 15;
+            this.ButtonHistory.Text = "History";
+            this.ButtonHistory.UseVisualStyleBackColor = false;
+            this.ButtonHistory.Click += new System.EventHandler(this.ButtonHistory_Click);
+            // 
             // ButtonMembers
             // 
-            this.ButtonMembers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(18)))), ((int)(((byte)(89)))));
+            this.ButtonMembers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.ButtonMembers.Dock = System.Windows.Forms.DockStyle.Top;
             this.ButtonMembers.FlatAppearance.BorderSize = 0;
             this.ButtonMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ButtonMembers.Image = global::GUI.Properties.Resources.woman;
+            this.ButtonMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonMembers.ForeColor = System.Drawing.Color.White;
+            this.ButtonMembers.Image = global::GUI.Properties.Resources.human_white;
             this.ButtonMembers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonMembers.Location = new System.Drawing.Point(0, 130);
             this.ButtonMembers.Name = "ButtonMembers";
@@ -83,12 +105,13 @@
             // 
             // ButtonLoans
             // 
-            this.ButtonLoans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(18)))), ((int)(((byte)(89)))));
+            this.ButtonLoans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.ButtonLoans.Dock = System.Windows.Forms.DockStyle.Top;
             this.ButtonLoans.FlatAppearance.BorderSize = 0;
             this.ButtonLoans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonLoans.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ButtonLoans.Image = global::GUI.Properties.Resources.loan;
+            this.ButtonLoans.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonLoans.ForeColor = System.Drawing.Color.White;
+            this.ButtonLoans.Image = global::GUI.Properties.Resources.payment_white;
             this.ButtonLoans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonLoans.Location = new System.Drawing.Point(0, 65);
             this.ButtonLoans.Name = "ButtonLoans";
@@ -101,13 +124,13 @@
             // 
             // ButtonSettings
             // 
-            this.ButtonSettings.BackColor = System.Drawing.SystemColors.Control;
+            this.ButtonSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.ButtonSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ButtonSettings.FlatAppearance.BorderSize = 0;
             this.ButtonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ButtonSettings.ForeColor = System.Drawing.Color.Black;
-            this.ButtonSettings.Image = global::GUI.Properties.Resources.browser;
+            this.ButtonSettings.ForeColor = System.Drawing.Color.White;
+            this.ButtonSettings.Image = global::GUI.Properties.Resources.settings_white;
             this.ButtonSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonSettings.Location = new System.Drawing.Point(0, 529);
             this.ButtonSettings.Name = "ButtonSettings";
@@ -119,13 +142,13 @@
             // 
             // ButtonExit
             // 
-            this.ButtonExit.BackColor = System.Drawing.SystemColors.Control;
+            this.ButtonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.ButtonExit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ButtonExit.FlatAppearance.BorderSize = 0;
             this.ButtonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ButtonExit.ForeColor = System.Drawing.Color.Black;
-            this.ButtonExit.Image = global::GUI.Properties.Resources.logout;
+            this.ButtonExit.ForeColor = System.Drawing.Color.White;
+            this.ButtonExit.Image = global::GUI.Properties.Resources.exit_white;
             this.ButtonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonExit.Location = new System.Drawing.Point(0, 594);
             this.ButtonExit.Name = "ButtonExit";
@@ -138,12 +161,13 @@
             // 
             // ButtonHome
             // 
-            this.ButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(18)))), ((int)(((byte)(89)))));
+            this.ButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.ButtonHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.ButtonHome.FlatAppearance.BorderSize = 0;
             this.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ButtonHome.Image = global::GUI.Properties.Resources.home__1_;
+            this.ButtonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonHome.ForeColor = System.Drawing.Color.White;
+            this.ButtonHome.Image = global::GUI.Properties.Resources.home_white;
             this.ButtonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonHome.Location = new System.Drawing.Point(0, 0);
             this.ButtonHome.Name = "ButtonHome";
@@ -157,29 +181,12 @@
             // 
             // MainPanel
             // 
+            this.MainPanel.BackColor = System.Drawing.Color.White;
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(300, 77);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(1140, 659);
             this.MainPanel.TabIndex = 4;
-            // 
-            // ButtonHistory
-            // 
-            this.ButtonHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(18)))), ((int)(((byte)(89)))));
-            this.ButtonHistory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ButtonHistory.FlatAppearance.BorderSize = 0;
-            this.ButtonHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ButtonHistory.Image = global::GUI.Properties.Resources.history;
-            this.ButtonHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonHistory.Location = new System.Drawing.Point(0, 195);
-            this.ButtonHistory.Name = "ButtonHistory";
-            this.ButtonHistory.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.ButtonHistory.Size = new System.Drawing.Size(300, 65);
-            this.ButtonHistory.TabIndex = 15;
-            this.ButtonHistory.Text = "History";
-            this.ButtonHistory.UseVisualStyleBackColor = false;
-            this.ButtonHistory.Click += new System.EventHandler(this.ButtonHistory_Click);
             // 
             // MainForm
             // 

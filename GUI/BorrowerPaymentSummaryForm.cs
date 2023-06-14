@@ -36,11 +36,11 @@ namespace GUI
             LabelCurrentBalance.Text = SelectedBorrower.loan.ToString("0.00");
             LabelPaymentAmount.Text = ParentForm.AmountPayed.ToString();
            
-            ButtonPay.Text = "Pay PHP " + ParentForm.AmountPayed.ToString();
+            ButtonPay.Text = "Pay PHP " + ParentForm.AmountPayed.ToString("0.00");
 
             if (ParentForm.AmountPayed > SelectedBorrower.loan)
             {
-                LabelChange.Text = (ParentForm.AmountPayed - SelectedBorrower.loan).ToString();
+                LabelChange.Text = (ParentForm.AmountPayed - SelectedBorrower.loan).ToString("0.00");
                 LabelAfterPaymentBalance.Text = "0.00";
             }
             else

@@ -52,10 +52,11 @@
             this.PanelAddBorrower.Name = "PanelAddBorrower";
             this.PanelAddBorrower.Size = new System.Drawing.Size(427, 426);
             this.PanelAddBorrower.TabIndex = 0;
+            // 
             // ButtonConfirm
             // 
             this.ButtonConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.ButtonConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(150)))), ((int)(((byte)(189)))));
+            this.ButtonConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.ButtonConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonConfirm.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.ButtonConfirm.ForeColor = System.Drawing.Color.White;
@@ -117,7 +118,7 @@
             this.LabelAddBorrower.TabIndex = 0;
             this.LabelAddBorrower.Text = "Add Borrower";
             // 
-            // AddBorrowerForm
+            // BorrowerAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -126,7 +127,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(427, 426);
             this.MinimumSize = new System.Drawing.Size(427, 426);
-            this.Name = "AddBorrowerForm";
+            this.Name = "BorrowerAddForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddBorrower";
             this.PanelAddBorrower.ResumeLayout(false);

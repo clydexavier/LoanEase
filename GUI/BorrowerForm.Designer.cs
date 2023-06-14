@@ -60,17 +60,15 @@
             // 
             // ButtonAddBorrower
             // 
-            this.ButtonAddBorrower.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonAddBorrower.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(18)))), ((int)(((byte)(89)))));
+            this.ButtonAddBorrower.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.ButtonAddBorrower.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.ButtonAddBorrower.FlatAppearance.BorderSize = 0;
             this.ButtonAddBorrower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonAddBorrower.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ButtonAddBorrower.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ButtonAddBorrower.Location = new System.Drawing.Point(945, 72);
+            this.ButtonAddBorrower.ForeColor = System.Drawing.Color.White;
+            this.ButtonAddBorrower.Location = new System.Drawing.Point(907, 72);
             this.ButtonAddBorrower.Name = "ButtonAddBorrower";
-            this.ButtonAddBorrower.Size = new System.Drawing.Size(140, 28);
+            this.ButtonAddBorrower.Size = new System.Drawing.Size(178, 28);
             this.ButtonAddBorrower.TabIndex = 1;
             this.ButtonAddBorrower.Text = "Add Borrower";
             this.ButtonAddBorrower.UseVisualStyleBackColor = false;

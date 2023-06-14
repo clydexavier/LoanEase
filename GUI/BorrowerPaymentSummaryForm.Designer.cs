@@ -144,7 +144,7 @@
             // 
             // ButtonPay
             // 
-            this.ButtonPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(18)))), ((int)(((byte)(89)))));
+            this.ButtonPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.ButtonPay.FlatAppearance.BorderSize = 0;
             this.ButtonPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonPay.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);

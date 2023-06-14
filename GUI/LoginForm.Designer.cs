@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.LoginPanel = new System.Windows.Forms.Panel();
+            this.ButtonExit = new System.Windows.Forms.Button();
             this.PasswordPanel = new System.Windows.Forms.Panel();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.UsernamePanel = new System.Windows.Forms.Panel();
@@ -39,10 +40,7 @@
             this.Asterisk2 = new System.Windows.Forms.Label();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.Asterisk1 = new System.Windows.Forms.Label();
-            this.SignupLabel = new System.Windows.Forms.LinkLabel();
-            this.NoAccountLabel = new System.Windows.Forms.Label();
             this.LoginLabel = new System.Windows.Forms.Label();
-            this.ButtonExit = new System.Windows.Forms.Button();
             this.LoginPanel.SuspendLayout();
             this.PasswordPanel.SuspendLayout();
             this.UsernamePanel.SuspendLayout();
@@ -61,8 +59,6 @@
             this.LoginPanel.Controls.Add(this.Asterisk2);
             this.LoginPanel.Controls.Add(this.UsernameLabel);
             this.LoginPanel.Controls.Add(this.Asterisk1);
-            this.LoginPanel.Controls.Add(this.SignupLabel);
-            this.LoginPanel.Controls.Add(this.NoAccountLabel);
             this.LoginPanel.Controls.Add(this.LoginLabel);
             this.LoginPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LoginPanel.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -71,6 +67,22 @@
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(600, 450);
             this.LoginPanel.TabIndex = 0;
+            // 
+            // ButtonExit
+            // 
+            this.ButtonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
+            this.ButtonExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ButtonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonExit.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.ButtonExit.ForeColor = System.Drawing.Color.White;
+            this.ButtonExit.Location = new System.Drawing.Point(194, 360);
+            this.ButtonExit.Margin = new System.Windows.Forms.Padding(0);
+            this.ButtonExit.Name = "ButtonExit";
+            this.ButtonExit.Size = new System.Drawing.Size(112, 50);
+            this.ButtonExit.TabIndex = 70;
+            this.ButtonExit.Text = "Exit";
+            this.ButtonExit.UseVisualStyleBackColor = false;
+            this.ButtonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // PasswordPanel
             // 
@@ -134,7 +146,7 @@
             this.ForgotPasswordLabel.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ForgotPasswordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(91)))), ((int)(((byte)(254)))));
             this.ForgotPasswordLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.ForgotPasswordLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(117)))), ((int)(((byte)(150)))));
+            this.ForgotPasswordLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.ForgotPasswordLabel.Location = new System.Drawing.Point(373, 379);
             this.ForgotPasswordLabel.Name = "ForgotPasswordLabel";
             this.ForgotPasswordLabel.Size = new System.Drawing.Size(172, 17);
@@ -145,7 +157,7 @@
             // 
             // LoginButton
             // 
-            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(18)))), ((int)(((byte)(89)))));
+            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.LoginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
@@ -199,28 +211,6 @@
             this.Asterisk1.TabIndex = 69;
             this.Asterisk1.Text = "*";
             // 
-            // SignupLabel
-            // 
-            this.SignupLabel.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.SignupLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.SignupLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(117)))), ((int)(((byte)(150)))));
-            this.SignupLabel.Location = new System.Drawing.Point(252, 94);
-            this.SignupLabel.Name = "SignupLabel";
-            this.SignupLabel.Size = new System.Drawing.Size(54, 18);
-            this.SignupLabel.TabIndex = 0;
-            this.SignupLabel.TabStop = true;
-            this.SignupLabel.Text = "Signup";
-            // 
-            // NoAccountLabel
-            // 
-            this.NoAccountLabel.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.NoAccountLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(98)))), ((int)(((byte)(114)))));
-            this.NoAccountLabel.Location = new System.Drawing.Point(55, 94);
-            this.NoAccountLabel.Name = "NoAccountLabel";
-            this.NoAccountLabel.Size = new System.Drawing.Size(202, 17);
-            this.NoAccountLabel.TabIndex = 69;
-            this.NoAccountLabel.Text = "Don\'t have an account yet?";
-            // 
             // LoginLabel
             // 
             this.LoginLabel.Font = new System.Drawing.Font("Arial", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
@@ -230,22 +220,6 @@
             this.LoginLabel.Size = new System.Drawing.Size(164, 54);
             this.LoginLabel.TabIndex = 69;
             this.LoginLabel.Text = "LOGIN";
-            // 
-            // ButtonExit
-            // 
-            this.ButtonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(18)))), ((int)(((byte)(89)))));
-            this.ButtonExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ButtonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonExit.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.ButtonExit.ForeColor = System.Drawing.Color.White;
-            this.ButtonExit.Location = new System.Drawing.Point(194, 360);
-            this.ButtonExit.Margin = new System.Windows.Forms.Padding(0);
-            this.ButtonExit.Name = "ButtonExit";
-            this.ButtonExit.Size = new System.Drawing.Size(112, 50);
-            this.ButtonExit.TabIndex = 70;
-            this.ButtonExit.Text = "Exit";
-            this.ButtonExit.UseVisualStyleBackColor = false;
-            this.ButtonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // LoginForm
             // 
@@ -288,8 +262,6 @@
         private Label Asterisk2;
         private Panel PasswordPanel;
         private Panel UsernamePanel;
-        private LinkLabel SignupLabel;
-        private Label NoAccountLabel;
         private Button ButtonExit;
     }
 }
