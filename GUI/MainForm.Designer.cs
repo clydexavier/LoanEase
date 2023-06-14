@@ -128,7 +128,7 @@
             this.ButtonSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ButtonSettings.FlatAppearance.BorderSize = 0;
             this.ButtonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ButtonSettings.ForeColor = System.Drawing.Color.White;
             this.ButtonSettings.Image = global::GUI.Properties.Resources.settings_white;
             this.ButtonSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -146,7 +146,7 @@
             this.ButtonExit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ButtonExit.FlatAppearance.BorderSize = 0;
             this.ButtonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ButtonExit.ForeColor = System.Drawing.Color.White;
             this.ButtonExit.Image = global::GUI.Properties.Resources.exit_white;
             this.ButtonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

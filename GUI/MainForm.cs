@@ -20,7 +20,7 @@ namespace GUI
         private static MembersForm membersForm = new MembersForm();
         private static HistoryForm historyForm = new HistoryForm();
         
-        Form? ActiveForm;
+        Form? ActiveForm = homeForm;
         public MainForm(LoginForm parent)
         {
             Database.Init();
@@ -32,6 +32,7 @@ namespace GUI
         {
             Database.Save();
             this.Hide();
+            ActiveForm = homeForm;
             loginForm.Show();
         }
 
