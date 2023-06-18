@@ -27,6 +27,7 @@ namespace GUI
             Database.Init();
             this.loginForm = parent;
             parent.Login += ButtonHome_Click;
+            accountForm.ChangePass += ButtonExit_Click;
             InitializeComponent();
         }
 

@@ -19,7 +19,7 @@ namespace GUI
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if(UsernameTextBox.Text.TrimEnd() != Database.Lender.username || !VerifyPassword(PasswordTextBox.Text.TrimEnd(), Database.Lender.password))
+            if (UsernameTextBox.Text.TrimEnd() != Database.Lender.username || !VerifyPassword(PasswordTextBox.Text.TrimEnd(), Database.Lender.password))
             {
                 MessageBox.Show("Invalid username and password.");
                 return;
