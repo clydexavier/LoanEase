@@ -10,13 +10,16 @@ namespace LoanEase
     {
         public string BorrowerName;
         public DateTime PaymentTime;
+        public DateTime BorrowedTime;
         public decimal AmountPayed;
         public bool BorrowerIsMember;
+        
 
-        public Payment(string borrowerName, DateTime paymentTime, decimal amountPayed, bool borrowerIsMember)
+        public Payment(string borrowerName, DateTime paymentTime, DateTime borrowedTime, decimal amountPayed, bool borrowerIsMember)
         {
             this.BorrowerName = borrowerName;
             this.PaymentTime = paymentTime;
+            this.BorrowedTime = borrowedTime;
             this.AmountPayed = amountPayed;
             this.BorrowerIsMember = borrowerIsMember;
         }

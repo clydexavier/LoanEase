@@ -47,7 +47,7 @@
             this.HeadingContainer.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.HeadingContainer.Location = new System.Drawing.Point(0, 0);
             this.HeadingContainer.Name = "HeadingContainer";
-            this.HeadingContainer.Size = new System.Drawing.Size(1440, 77);
+            this.HeadingContainer.Size = new System.Drawing.Size(1319, 77);
             this.HeadingContainer.TabIndex = 0;
             // 
             // ButtonPanel
@@ -137,8 +137,9 @@
             this.ButtonSettings.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.ButtonSettings.Size = new System.Drawing.Size(300, 65);
             this.ButtonSettings.TabIndex = 12;
-            this.ButtonSettings.Text = "Settings";
+            this.ButtonSettings.Text = "Account";
             this.ButtonSettings.UseVisualStyleBackColor = false;
+            this.ButtonSettings.Click += new System.EventHandler(this.ButtonSettings_Click);
             // 
             // ButtonExit
             // 
@@ -177,7 +178,6 @@
             this.ButtonHome.Text = "Home\r\n";
             this.ButtonHome.UseVisualStyleBackColor = false;
             this.ButtonHome.Click += new System.EventHandler(this.ButtonHome_Click);
-            this.ButtonHome.MouseEnter += new System.EventHandler(this.ButtonHome_MouseEnter);
             // 
             // MainPanel
             // 
@@ -185,7 +185,7 @@
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(300, 77);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1140, 659);
+            this.MainPanel.Size = new System.Drawing.Size(1019, 659);
             this.MainPanel.TabIndex = 4;
             // 
             // MainForm
@@ -193,15 +193,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1440, 736);
+            this.ClientSize = new System.Drawing.Size(1319, 736);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.HeadingContainer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.HelpButton = true;
+            this.MinimumSize = new System.Drawing.Size(1339, 779);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminDashboard";
+            this.Text = "Loan Ease";
             this.ButtonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -216,7 +217,7 @@
         private Button ButtonHome;
         private Button ButtonMembers;
         private Button ButtonLoans;
-        private Panel MainPanel;
         private Button ButtonHistory;
+        public Panel MainPanel;
     }
 }

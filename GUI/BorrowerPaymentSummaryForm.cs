@@ -56,8 +56,9 @@ namespace GUI
             decimal amount = ParentForm.AmountPayed;
             SelectedBorrower.pay(amount);
 
-            Payment p = new Payment(SelectedBorrower.FirstName + " " + SelectedBorrower.LastName, DateTime.Now, previous_loan - SelectedBorrower.loan, SelectedBorrower.isMember);
+            Payment p = new Payment(SelectedBorrower.FirstName + " " + SelectedBorrower.LastName, DateTime.Now, SelectedBorrower.BorrowedTime, previous_loan - SelectedBorrower.loan, SelectedBorrower.isMember);
             Database.Payments.Add(p);
+            Database.TotalPayments += p.AmountPayed;
 
             if (SelectedBorrower.loan <= 0)
             {
@@ -65,9 +66,8 @@ namespace GUI
                 SelectedBorrower = null;
             }
 
-            
-            
             PayBorrower?.Invoke(this, new EventArgs());
+            Database.Save();
 
             this.DialogResult= DialogResult.OK;
             this.Reset();

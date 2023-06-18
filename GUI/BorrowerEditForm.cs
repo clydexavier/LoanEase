@@ -36,6 +36,7 @@ namespace GUI
             this.Reset();
 
             this.Hide();
+            Database.Save();
         }
 
         private void Reset()

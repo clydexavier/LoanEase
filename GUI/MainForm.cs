@@ -16,15 +16,17 @@ namespace GUI
         private LoginForm loginForm;
 
         private static BorrowerForm borrowerForm = new BorrowerForm();
-        private static HomeForm homeForm = new HomeForm();
+        public static HomeForm homeForm = new HomeForm();
         private static MembersForm membersForm = new MembersForm();
         private static HistoryForm historyForm = new HistoryForm();
+        private static AccountForm accountForm = new AccountForm();
         
         Form? ActiveForm = homeForm;
         public MainForm(LoginForm parent)
         {
             Database.Init();
             this.loginForm = parent;
+            parent.Login += ButtonHome_Click;
             InitializeComponent();
         }
 
@@ -45,13 +47,10 @@ namespace GUI
             }
             MainPanel.Controls.Clear();
             MainPanel.Controls.Add(homeForm);
+            homeForm.PopulateDueDate();
             homeForm.Show();
         }
 
-        private void ButtonHome_MouseEnter(object sender, EventArgs e)
-        {
-            
-        }
 
         private void ButtonMembers_Click(object sender, EventArgs e)
         {
@@ -89,6 +88,18 @@ namespace GUI
             MainPanel.Controls.Add(historyForm);
             historyForm.PopulatePayments();
             historyForm.Show();
+        }
+
+        private void ButtonSettings_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveForm != null)
+            {
+                this.ActiveForm.Hide();
+                this.ActiveForm = accountForm;
+            }
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(accountForm);
+            accountForm.Show();
         }
     }
 }

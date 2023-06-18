@@ -9,6 +9,8 @@ namespace GUI
     {
         public static MainForm mainForm;
 
+        public event EventHandler Login;
+
         public LoginForm()
         {
             InitializeComponent();
@@ -24,6 +26,8 @@ namespace GUI
             }
             this.UsernameTextBox.Text = string.Empty;
             this.PasswordTextBox.Text = string.Empty;
+
+            Login.Invoke(this, new EventArgs());
             mainForm.Show();
             this.Hide();
         }
