@@ -35,7 +35,9 @@ namespace GUI
             PanelRight.Location = new Point(this.Width / 2, 87);
 
 
-            PanelPassword.Location = new Point(((this.Width / 2) - (PanelPassword.Width)) / 2,0 );
+            PanelPassword.Location = new Point(((this.Width / 2) - (PanelPassword.Width)) / 2, (PanelRight.Height - PanelPassword.Height) / 2  );
+
+            this.LabelOverview.Location = new Point((this.Width / 2) - (LabelOverview.Width/2), LabelOverview.Location.Y);
 
 
         }

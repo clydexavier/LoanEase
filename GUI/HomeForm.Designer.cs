@@ -40,21 +40,27 @@
             this.MonthlyInterst = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BorrowerLabel = new System.Windows.Forms.Label();
             this.PanelBorrowers = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LabelBorrowers = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PanelPayments = new System.Windows.Forms.Panel();
-            this.LabelPayments = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.LabelCollected = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelLended = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.LabelLended = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVBorrowers)).BeginInit();
             this.PanelBorrowers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelPayments.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.PanelLended.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -73,10 +79,10 @@
             // LabelDueDate
             // 
             this.LabelDueDate.AutoSize = true;
-            this.LabelDueDate.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.LabelDueDate.Location = new System.Drawing.Point(443, 12);
+            this.LabelDueDate.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.LabelDueDate.Location = new System.Drawing.Point(20, 9);
             this.LabelDueDate.Name = "LabelDueDate";
-            this.LabelDueDate.Size = new System.Drawing.Size(203, 28);
+            this.LabelDueDate.Size = new System.Drawing.Size(245, 32);
             this.LabelDueDate.TabIndex = 3;
             this.LabelDueDate.Text = "Upcoming Due Date";
             // 
@@ -182,66 +188,99 @@
             // PanelBorrowers
             // 
             this.PanelBorrowers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
+            this.PanelBorrowers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PanelBorrowers.Controls.Add(this.pictureBox1);
             this.PanelBorrowers.Controls.Add(this.LabelBorrowers);
             this.PanelBorrowers.Controls.Add(this.label1);
             this.PanelBorrowers.Location = new System.Drawing.Point(12, 97);
             this.PanelBorrowers.Name = "PanelBorrowers";
-            this.PanelBorrowers.Size = new System.Drawing.Size(305, 100);
+            this.PanelBorrowers.Size = new System.Drawing.Size(305, 129);
             this.PanelBorrowers.TabIndex = 2;
+            this.PanelBorrowers.SizeChanged += new System.EventHandler(this.PanelBorrowers_SizeChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.icons8_person_50;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 129);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // LabelBorrowers
             // 
             this.LabelBorrowers.AutoSize = true;
-            this.LabelBorrowers.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.LabelBorrowers.ForeColor = System.Drawing.Color.LightCoral;
-            this.LabelBorrowers.Location = new System.Drawing.Point(142, 54);
+            this.LabelBorrowers.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.LabelBorrowers.ForeColor = System.Drawing.Color.White;
+            this.LabelBorrowers.Location = new System.Drawing.Point(117, 54);
             this.LabelBorrowers.Name = "LabelBorrowers";
-            this.LabelBorrowers.Size = new System.Drawing.Size(28, 32);
+            this.LabelBorrowers.Size = new System.Drawing.Size(27, 32);
             this.LabelBorrowers.TabIndex = 1;
             this.LabelBorrowers.Text = "0";
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(20, 9);
+            this.label1.Location = new System.Drawing.Point(106, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 45);
+            this.label1.Size = new System.Drawing.Size(177, 45);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Total Borrowers";
+            this.label1.Text = "Borrowers";
             // 
             // PanelPayments
             // 
             this.PanelPayments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
-            this.PanelPayments.Controls.Add(this.LabelPayments);
+            this.PanelPayments.Controls.Add(this.pictureBox2);
+            this.PanelPayments.Controls.Add(this.LabelCollected);
             this.PanelPayments.Controls.Add(this.label4);
             this.PanelPayments.Location = new System.Drawing.Point(385, 97);
             this.PanelPayments.Name = "PanelPayments";
-            this.PanelPayments.Size = new System.Drawing.Size(335, 100);
+            this.PanelPayments.Size = new System.Drawing.Size(335, 129);
             this.PanelPayments.TabIndex = 3;
+            this.PanelPayments.SizeChanged += new System.EventHandler(this.PanelPayments_SizeChanged);
             // 
-            // LabelPayments
+            // pictureBox2
             // 
-            this.LabelPayments.AutoSize = true;
-            this.LabelPayments.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.LabelPayments.ForeColor = System.Drawing.Color.LightCoral;
-            this.LabelPayments.Location = new System.Drawing.Point(155, 54);
-            this.LabelPayments.Name = "LabelPayments";
-            this.LabelPayments.Size = new System.Drawing.Size(28, 32);
-            this.LabelPayments.TabIndex = 1;
-            this.LabelPayments.Text = "0";
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Image = global::GUI.Properties.Resources.icons8_coin_in_hand_78;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 129);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // LabelCollected
+            // 
+            this.LabelCollected.AutoSize = true;
+            this.LabelCollected.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.LabelCollected.ForeColor = System.Drawing.Color.White;
+            this.LabelCollected.Location = new System.Drawing.Point(121, 54);
+            this.LabelCollected.Name = "LabelCollected";
+            this.LabelCollected.Size = new System.Drawing.Size(27, 32);
+            this.LabelCollected.TabIndex = 1;
+            this.LabelCollected.Text = "0";
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(0, 9);
+            this.label4.Location = new System.Drawing.Point(106, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(312, 45);
+            this.label4.Size = new System.Drawing.Size(159, 45);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Payments Collected";
+            this.label4.Text = "Collected";
             // 
             // panel1
             // 
@@ -259,34 +298,50 @@
             // PanelLended
             // 
             this.PanelLended.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
+            this.PanelLended.Controls.Add(this.pictureBox3);
             this.PanelLended.Controls.Add(this.LabelLended);
             this.PanelLended.Controls.Add(this.label6);
             this.PanelLended.Location = new System.Drawing.Point(767, 97);
             this.PanelLended.Name = "PanelLended";
-            this.PanelLended.Size = new System.Drawing.Size(305, 100);
+            this.PanelLended.Size = new System.Drawing.Size(305, 129);
             this.PanelLended.TabIndex = 4;
+            this.PanelLended.SizeChanged += new System.EventHandler(this.PanelLended_SizeChanged);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox3.Image = global::GUI.Properties.Resources.icons8_money_loan_78;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 129);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
             // LabelLended
             // 
             this.LabelLended.AutoSize = true;
-            this.LabelLended.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.LabelLended.ForeColor = System.Drawing.Color.LightCoral;
-            this.LabelLended.Location = new System.Drawing.Point(156, 54);
+            this.LabelLended.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.LabelLended.ForeColor = System.Drawing.Color.White;
+            this.LabelLended.Location = new System.Drawing.Point(121, 54);
             this.LabelLended.Name = "LabelLended";
-            this.LabelLended.Size = new System.Drawing.Size(28, 32);
+            this.LabelLended.Size = new System.Drawing.Size(27, 32);
             this.LabelLended.TabIndex = 1;
             this.LabelLended.Text = "0";
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(35, 9);
+            this.label6.Location = new System.Drawing.Point(106, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(242, 45);
+            this.label6.Size = new System.Drawing.Size(129, 45);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Money Lended";
+            this.label6.Text = "Lended";
             // 
             // HomeForm
             // 
@@ -303,12 +358,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGVBorrowers)).EndInit();
             this.PanelBorrowers.ResumeLayout(false);
             this.PanelBorrowers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelPayments.ResumeLayout(false);
             this.PanelPayments.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.PanelLended.ResumeLayout(false);
             this.PanelLended.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,11 +385,14 @@
         private Label LabelBorrowers;
         private Label label1;
         private Panel PanelPayments;
-        private Label LabelPayments;
+        private Label LabelCollected;
         private Label label4;
         private Panel panel1;
         private Panel PanelLended;
         private Label LabelLended;
         private Label label6;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

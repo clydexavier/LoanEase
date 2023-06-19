@@ -1,0 +1,1 @@
+{"username":"user","password":"$2b$10$u/YBANJB1omzHhI1wnkg3.9xRgzOs5O8QlB/pKZ55Z35SeRWZMfjS"}

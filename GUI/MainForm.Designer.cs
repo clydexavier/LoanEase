@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.HeadingContainer = new System.Windows.Forms.Panel();
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.ButtonHistory = new System.Windows.Forms.Button();
@@ -47,7 +48,7 @@
             this.HeadingContainer.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.HeadingContainer.Location = new System.Drawing.Point(0, 0);
             this.HeadingContainer.Name = "HeadingContainer";
-            this.HeadingContainer.Size = new System.Drawing.Size(1319, 77);
+            this.HeadingContainer.Size = new System.Drawing.Size(1420, 77);
             this.HeadingContainer.TabIndex = 0;
             // 
             // ButtonPanel
@@ -62,7 +63,7 @@
             this.ButtonPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.ButtonPanel.Location = new System.Drawing.Point(0, 77);
             this.ButtonPanel.Name = "ButtonPanel";
-            this.ButtonPanel.Size = new System.Drawing.Size(300, 659);
+            this.ButtonPanel.Size = new System.Drawing.Size(300, 600);
             this.ButtonPanel.TabIndex = 3;
             // 
             // ButtonHistory
@@ -132,7 +133,7 @@
             this.ButtonSettings.ForeColor = System.Drawing.Color.White;
             this.ButtonSettings.Image = global::GUI.Properties.Resources.settings_white;
             this.ButtonSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSettings.Location = new System.Drawing.Point(0, 529);
+            this.ButtonSettings.Location = new System.Drawing.Point(0, 470);
             this.ButtonSettings.Name = "ButtonSettings";
             this.ButtonSettings.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.ButtonSettings.Size = new System.Drawing.Size(300, 65);
@@ -151,7 +152,7 @@
             this.ButtonExit.ForeColor = System.Drawing.Color.White;
             this.ButtonExit.Image = global::GUI.Properties.Resources.exit_white;
             this.ButtonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonExit.Location = new System.Drawing.Point(0, 594);
+            this.ButtonExit.Location = new System.Drawing.Point(0, 535);
             this.ButtonExit.Name = "ButtonExit";
             this.ButtonExit.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.ButtonExit.Size = new System.Drawing.Size(300, 65);
@@ -185,7 +186,7 @@
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(300, 77);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1019, 659);
+            this.MainPanel.Size = new System.Drawing.Size(1120, 600);
             this.MainPanel.TabIndex = 4;
             // 
             // MainForm
@@ -193,13 +194,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1319, 736);
+            this.ClientSize = new System.Drawing.Size(1420, 677);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.HeadingContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.HelpButton = true;
-            this.MinimumSize = new System.Drawing.Size(1339, 779);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1440, 720);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loan Ease";
