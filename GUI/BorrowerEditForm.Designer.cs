@@ -33,6 +33,7 @@
             this.TextBoxLastname = new System.Windows.Forms.TextBox();
             this.TextBoxFirstname = new System.Windows.Forms.TextBox();
             this.LabelEditBorrower = new System.Windows.Forms.Label();
+            this.ButtonBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ButtonConfirm
@@ -96,11 +97,25 @@
             this.LabelEditBorrower.TabIndex = 6;
             this.LabelEditBorrower.Text = "Edit Borrower";
             // 
+            // ButtonBack
+            // 
+            this.ButtonBack.FlatAppearance.BorderSize = 0;
+            this.ButtonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonBack.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.ButtonBack.Image = global::GUI.Properties.Resources.close;
+            this.ButtonBack.Location = new System.Drawing.Point(388, -3);
+            this.ButtonBack.Name = "ButtonBack";
+            this.ButtonBack.Size = new System.Drawing.Size(40, 40);
+            this.ButtonBack.TabIndex = 18;
+            this.ButtonBack.UseVisualStyleBackColor = true;
+            this.ButtonBack.Click += new System.EventHandler(this.ButtonBack_Click);
+            // 
             // BorrowerEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(427, 426);
+            this.Controls.Add(this.ButtonBack);
             this.Controls.Add(this.ButtonConfirm);
             this.Controls.Add(this.ComboBoxIsMember);
             this.Controls.Add(this.TextBoxLastname);
@@ -124,5 +139,6 @@
         public ComboBox ComboBoxIsMember;
         public TextBox TextBoxLastname;
         public TextBox TextBoxFirstname;
+        private Button ButtonBack;
     }
 }

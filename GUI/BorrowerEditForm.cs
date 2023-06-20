@@ -45,5 +45,12 @@ namespace GUI
             this.TextBoxLastname.Text = string.Empty;
             this.ComboBoxIsMember.SelectedIndex = -1;
         }
+
+        private void ButtonBack_Click(object sender, EventArgs e)
+        {
+            this.Reset();
+            this.DialogResult|= DialogResult.Cancel;
+            return;
+        }
     }
 }
