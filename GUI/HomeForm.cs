@@ -27,6 +27,7 @@ namespace GUI
             var sortedBorrowers = Database.borrowers.OrderBy(obj => obj.BorrowedTime).ToList();
             foreach (Borrower b in sortedBorrowers)
             {
+                if(b.monthlyInterest > 0)
                 this.DGVBorrowers.Rows.Add(b.FirstName + " " + b.LastName, b.isMember ? "Yes" : "No", b.BorrowedTime.AddDays(90).ToString("MMMM d, yyyy"), "PHP " + b.principal.ToString("0.00"), "PHP " + b.monthlyInterest.ToString("0.00"));
             }
             this.LabelBorrowers.Text = Database.borrowers.Count.ToString();
