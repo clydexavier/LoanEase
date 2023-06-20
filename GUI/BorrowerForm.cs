@@ -41,7 +41,7 @@ namespace GUI
             foreach (Borrower b in Database.borrowers)
             {
 
-                this.DGVBorrowers.Rows.Add(b.FirstName + " " + b.LastName, b.isMember ? "Yes" : "No", b.BorrowedTime.ToString("MMMM d, yyyy"), "PHP " + b.loan.ToString("0.00"), "PHP " + b.monthlyInterest.ToString("0.00"));
+                this.DGVBorrowers.Rows.Add(b.FirstName + " " + b.LastName, b.isMember ? "Yes" : "No", b.BorrowedTime.ToString("MMMM d, yyyy"), "PHP " + b.principal.ToString("0.00"), "PHP " + b.monthlyInterest.ToString("0.00"));
             }
         }
         private void PopulateDataGrid()
@@ -49,7 +49,7 @@ namespace GUI
             this.DGVBorrowers.Rows.Clear();
             foreach (Borrower b in Database.borrowers)
             {
-                this.DGVBorrowers.Rows.Add(b.FirstName + " " + b.LastName, b.isMember ? "Yes" : "No", b.BorrowedTime.ToString("MMMM d, yyyy"), "PHP " + b.loan.ToString("0.00"), "PHP " + b.monthlyInterest.ToString("0.00"));
+                this.DGVBorrowers.Rows.Add(b.FirstName + " " + b.LastName, b.isMember ? "Yes" : "No", b.BorrowedTime.ToString("MMMM d, yyyy"), "PHP " + b.principal.ToString("0.00"), "PHP " + b.monthlyInterest.ToString("0.00"));
             }
         }
 
@@ -236,7 +236,7 @@ namespace GUI
             {
                 if(b.FullName.ToLower().Contains(searchString))
                 {
-                    this.DGVBorrowers.Rows.Add(b.FirstName + " " + b.LastName, b.isMember ? "Yes" : "No", b.BorrowedTime.ToString("MMMM d, yyyy"), "PHP " + b.loan.ToString("0.00"), "PHP " + b.monthlyInterest.ToString("0.00"));
+                    this.DGVBorrowers.Rows.Add(b.FirstName + " " + b.LastName, b.isMember ? "Yes" : "No", b.BorrowedTime.ToString("MMMM d, yyyy"), "PHP " + b.principal.ToString("0.00"), "PHP " + b.monthlyInterest.ToString("0.00"));
                 }
                 
             }

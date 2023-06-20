@@ -9,8 +9,9 @@ namespace LoanEase
         public string FullName;
         public bool isMember;
         //name, is member, borrowed time, loan, monthly
-        public decimal loan;
+        public decimal totalLoan;
         public decimal initialLoan;
+        public decimal principal;
         public DateTime BorrowedTime;
         public DateTime? PayedTime;
         public decimal monthlyInterest;
@@ -20,33 +21,51 @@ namespace LoanEase
             this.FirstName = first_name;
             this.LastName = last_name;
             this.FullName = this.FirstName + " " + this.LastName;
+            this.initialLoan = loan;
 
-            this.initialLoan= loan;
+            this.principal= loan;
             this.isMember = is_member;
             
             this.BorrowedTime = DateTime.Now;
             this.monthlyInterest = Calculate.MonthlyInterest(isMember, loan);
-            this.loan = loan + monthlyInterest;
+            this.totalLoan = loan + monthlyInterest;
         }
 
         public bool borrow(decimal amount)
         {
             //borrower can't borrow if they still have current loan to pay
-            if (this.loan > 0) return false;
+            if (this.totalLoan > 0) return false;
 
             this.monthlyInterest = Calculate.MonthlyInterest(this.isMember, amount);
             this.BorrowedTime = DateTime.Now;
-            this.loan = Calculate.Loan(this.isMember, amount);
+            this.principal = Calculate.Loan(this.isMember, amount);
    
             return true;
         }
         public bool pay(decimal amount_payed)
         {
             //borrower can't pay if they don't have a loan
-            if (this.loan <= 0) return false;
+            if (this.totalLoan <= 0) return false;
 
-            this.loan = Calculate.Pay(this.loan, amount_payed);
-            if(this.loan == 0) PayedTime = DateTime.Now;
+            //if payment is more deduct principal amount
+            if (monthlyInterest < amount_payed)
+                this.principal = Calculate.Pay(this.principal, amount_payed - monthlyInterest);
+
+
+
+            //deduct quarterly interest
+            this.monthlyInterest = Calculate.Pay(this.monthlyInterest, amount_payed);
+
+            if (totalLoan > amount_payed)
+                totalLoan -= amount_payed;
+            else totalLoan = 0;
+            
+
+
+            //if payment is more than two combined, give change
+
+
+            if (this.totalLoan == 0) PayedTime = DateTime.Now;
             return true;
         }
 

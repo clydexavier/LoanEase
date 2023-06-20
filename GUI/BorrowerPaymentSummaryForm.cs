@@ -33,34 +33,50 @@ namespace GUI
 
             this.SelectedBorrower = ParentForm.selectedBorrower;
             LabelBorrowerName.Text = SelectedBorrower.FirstName + " " + SelectedBorrower.LastName;
-            LabelCurrentBalance.Text = SelectedBorrower.loan.ToString("0.00");
+            LabelCurrentBalance.Text = SelectedBorrower.principal.ToString("0.00");
+
+            LabelCurrentInterest.Text = SelectedBorrower.monthlyInterest.ToString("0.00");
             LabelPaymentAmount.Text = ParentForm.AmountPayed.ToString();
            
             ButtonPay.Text = "Pay PHP " + ParentForm.AmountPayed.ToString("0.00");
 
-            if (ParentForm.AmountPayed > SelectedBorrower.loan)
+            if (ParentForm.AmountPayed > SelectedBorrower.totalLoan)
             {
-                LabelChange.Text = (ParentForm.AmountPayed - SelectedBorrower.loan).ToString("0.00");
+                LabelChange.Text = (ParentForm.AmountPayed - SelectedBorrower.totalLoan).ToString("0.00");
+                LabelAfterInterest.Text = "0.00";
                 LabelAfterPaymentBalance.Text = "0.00";
             }
             else
             {
                 LabelChange.Text = "0.00";
-                LabelAfterPaymentBalance.Text = (SelectedBorrower.loan - ParentForm.AmountPayed).ToString("0.00");
+                if(ParentForm.AmountPayed > SelectedBorrower.monthlyInterest)
+                {
+                    LabelAfterInterest.Text = "0.00";
+                    LabelAfterPaymentBalance.Text = (SelectedBorrower.principal + SelectedBorrower.monthlyInterest - ParentForm.AmountPayed).ToString("0.00");
+                }
+                else
+                {
+                    LabelAfterInterest.Text = (SelectedBorrower.monthlyInterest - ParentForm.AmountPayed).ToString("0.00");
+                    LabelAfterPaymentBalance.Text = SelectedBorrower.principal.ToString("0.00");
+                }
             }
         }
 
         private void ButtonPay_Click(object sender, EventArgs e)
         {
-            decimal previous_loan = SelectedBorrower.loan;
+            decimal previous_loan = SelectedBorrower.totalLoan;
+            
             decimal amount = ParentForm.AmountPayed;
-            SelectedBorrower.pay(amount);
 
-            Payment p = new Payment(SelectedBorrower.FirstName + " " + SelectedBorrower.LastName, DateTime.Now, SelectedBorrower.BorrowedTime, previous_loan - SelectedBorrower.loan, SelectedBorrower.isMember);
+            SelectedBorrower.pay(amount);
+            decimal amount_payment = previous_loan - SelectedBorrower.totalLoan;
+
+
+            Payment p = new Payment(SelectedBorrower.FirstName + " " + SelectedBorrower.LastName, DateTime.Now,SelectedBorrower.BorrowedTime,amount_payment , SelectedBorrower.isMember);
             Database.Payments.Add(p);
             Database.TotalPayments += p.AmountPayed;
 
-            if (SelectedBorrower.loan <= 0)
+            if (SelectedBorrower.totalLoan <= 0)
             {
                 Database.borrowers.Remove(SelectedBorrower);
                 SelectedBorrower = null;

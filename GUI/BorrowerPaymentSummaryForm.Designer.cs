@@ -41,6 +41,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.LabelChange = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.LabelCurrentInterest = new System.Windows.Forms.Label();
+            this.LabelAfterInterest = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LabelPayBorrower
@@ -80,7 +84,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label2.Location = new System.Drawing.Point(51, 250);
+            this.label2.Location = new System.Drawing.Point(51, 295);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(200, 21);
             this.label2.TabIndex = 11;
@@ -113,7 +117,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label4.Location = new System.Drawing.Point(51, 190);
+            this.label4.Location = new System.Drawing.Point(51, 231);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(152, 21);
             this.label4.TabIndex = 15;
@@ -124,7 +128,7 @@
             // 
             this.LabelPaymentAmount.AutoSize = true;
             this.LabelPaymentAmount.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.LabelPaymentAmount.Location = new System.Drawing.Point(283, 190);
+            this.LabelPaymentAmount.Location = new System.Drawing.Point(283, 231);
             this.LabelPaymentAmount.Name = "LabelPaymentAmount";
             this.LabelPaymentAmount.Size = new System.Drawing.Size(52, 21);
             this.LabelPaymentAmount.TabIndex = 16;
@@ -135,7 +139,7 @@
             // 
             this.LabelAfterPaymentBalance.AutoSize = true;
             this.LabelAfterPaymentBalance.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.LabelAfterPaymentBalance.Location = new System.Drawing.Point(283, 250);
+            this.LabelAfterPaymentBalance.Location = new System.Drawing.Point(283, 295);
             this.LabelAfterPaymentBalance.Name = "LabelAfterPaymentBalance";
             this.LabelAfterPaymentBalance.Size = new System.Drawing.Size(52, 21);
             this.LabelAfterPaymentBalance.TabIndex = 17;
@@ -149,7 +153,7 @@
             this.ButtonPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonPay.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.ButtonPay.ForeColor = System.Drawing.Color.White;
-            this.ButtonPay.Location = new System.Drawing.Point(86, 326);
+            this.ButtonPay.Location = new System.Drawing.Point(84, 411);
             this.ButtonPay.Name = "ButtonPay";
             this.ButtonPay.Size = new System.Drawing.Size(273, 40);
             this.ButtonPay.TabIndex = 18;
@@ -173,7 +177,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label5.Location = new System.Drawing.Point(51, 283);
+            this.label5.Location = new System.Drawing.Point(51, 369);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 21);
             this.label5.TabIndex = 21;
@@ -184,18 +188,66 @@
             // 
             this.LabelChange.AutoSize = true;
             this.LabelChange.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.LabelChange.Location = new System.Drawing.Point(283, 283);
+            this.LabelChange.Location = new System.Drawing.Point(283, 369);
             this.LabelChange.Name = "LabelChange";
             this.LabelChange.Size = new System.Drawing.Size(52, 21);
             this.LabelChange.TabIndex = 22;
             this.LabelChange.Text = "label1";
             this.LabelChange.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label6.Location = new System.Drawing.Point(51, 192);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(137, 21);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Current Interest :";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LabelCurrentInterest
+            // 
+            this.LabelCurrentInterest.AutoSize = true;
+            this.LabelCurrentInterest.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.LabelCurrentInterest.Location = new System.Drawing.Point(283, 192);
+            this.LabelCurrentInterest.Name = "LabelCurrentInterest";
+            this.LabelCurrentInterest.Size = new System.Drawing.Size(52, 21);
+            this.LabelCurrentInterest.TabIndex = 23;
+            this.LabelCurrentInterest.Text = "label1";
+            this.LabelCurrentInterest.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // LabelAfterInterest
+            // 
+            this.LabelAfterInterest.AutoSize = true;
+            this.LabelAfterInterest.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.LabelAfterInterest.Location = new System.Drawing.Point(283, 329);
+            this.LabelAfterInterest.Name = "LabelAfterInterest";
+            this.LabelAfterInterest.Size = new System.Drawing.Size(52, 21);
+            this.LabelAfterInterest.TabIndex = 26;
+            this.LabelAfterInterest.Text = "label1";
+            this.LabelAfterInterest.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label8.Location = new System.Drawing.Point(51, 329);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(198, 21);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "After Payment Interest :  ";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // BorrowerPaymentSummaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 400);
+            this.ClientSize = new System.Drawing.Size(443, 482);
+            this.Controls.Add(this.LabelAfterInterest);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.LabelCurrentInterest);
             this.Controls.Add(this.LabelChange);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
@@ -210,7 +262,6 @@
             this.Controls.Add(this.LabelCurrentBalance);
             this.Controls.Add(this.LabelPayBorrower);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(443, 400);
             this.MinimumSize = new System.Drawing.Size(443, 370);
             this.Name = "BorrowerPaymentSummaryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -235,5 +286,9 @@
         private Button button1;
         private Label label5;
         private Label LabelChange;
+        private Label label6;
+        private Label LabelCurrentInterest;
+        private Label LabelAfterInterest;
+        private Label label8;
     }
 }

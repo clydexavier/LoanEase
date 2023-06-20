@@ -104,7 +104,7 @@ namespace LoanEase
         {
             string contents = System.IO.File.ReadAllText(Path.Combine(DocumentPath, PaymentsFilename));
             Payments = JsonConvert.DeserializeObject<List<Payment>>(contents);
-
+            TotalPayments = 0;
             foreach (var x in Payments)
                 TotalPayments += x.AmountPayed;
         }

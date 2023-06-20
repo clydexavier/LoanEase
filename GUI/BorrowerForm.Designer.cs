@@ -176,7 +176,7 @@
             // Amount
             // 
             this.Amount.FillWeight = 77.60936F;
-            this.Amount.HeaderText = "Amount";
+            this.Amount.HeaderText = "Principal Amount";
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
             // 

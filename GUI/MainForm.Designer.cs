@@ -37,12 +37,15 @@
             this.ButtonExit = new System.Windows.Forms.Button();
             this.ButtonHome = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.HeadingContainer.SuspendLayout();
             this.ButtonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // HeadingContainer
             // 
             this.HeadingContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(61)))), ((int)(((byte)(142)))));
+            this.HeadingContainer.Controls.Add(this.label1);
             this.HeadingContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeadingContainer.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.HeadingContainer.Location = new System.Drawing.Point(0, 0);
@@ -168,6 +171,16 @@
             this.MainPanel.Size = new System.Drawing.Size(1120, 600);
             this.MainPanel.TabIndex = 4;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label1.Location = new System.Drawing.Point(24, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(262, 59);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "LoanEase";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -184,6 +197,8 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loan Ease";
+            this.HeadingContainer.ResumeLayout(false);
+            this.HeadingContainer.PerformLayout();
             this.ButtonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -199,5 +214,6 @@
         private Button ButtonLoans;
         private Button ButtonHistory;
         public Panel MainPanel;
+        private Label label1;
     }
 }
