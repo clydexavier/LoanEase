@@ -33,11 +33,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.LabelDueDate = new System.Windows.Forms.Label();
             this.DGVBorrowers = new System.Windows.Forms.DataGridView();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsMember = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateBorrowed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MonthlyInterst = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BorrowerLabel = new System.Windows.Forms.Label();
             this.PanelBorrowers = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -52,6 +47,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.LabelLended = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsMember = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateBorrowed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MonthlyInterst = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVBorrowers)).BeginInit();
             this.PanelBorrowers.SuspendLayout();
@@ -138,42 +138,6 @@
             this.DGVBorrowers.ShowRowErrors = false;
             this.DGVBorrowers.Size = new System.Drawing.Size(1052, 213);
             this.DGVBorrowers.TabIndex = 2;
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.DataPropertyName = "Borrower.Name";
-            this.ColumnName.FillWeight = 94.86185F;
-            this.ColumnName.HeaderText = "Name";
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.ReadOnly = true;
-            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // IsMember
-            // 
-            this.IsMember.FillWeight = 94.86185F;
-            this.IsMember.HeaderText = "Is Member";
-            this.IsMember.Name = "IsMember";
-            // 
-            // DateBorrowed
-            // 
-            this.DateBorrowed.FillWeight = 94.86185F;
-            this.DateBorrowed.HeaderText = "Due Date";
-            this.DateBorrowed.Name = "DateBorrowed";
-            this.DateBorrowed.ReadOnly = true;
-            // 
-            // Amount
-            // 
-            this.Amount.FillWeight = 94.86185F;
-            this.Amount.HeaderText = "Amount";
-            this.Amount.Name = "Amount";
-            this.Amount.ReadOnly = true;
-            // 
-            // MonthlyInterst
-            // 
-            this.MonthlyInterst.FillWeight = 94.86185F;
-            this.MonthlyInterst.HeaderText = "Monthly Interest";
-            this.MonthlyInterst.Name = "MonthlyInterst";
-            this.MonthlyInterst.ReadOnly = true;
             // 
             // BorrowerLabel
             // 
@@ -343,6 +307,42 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Lended";
             // 
+            // ColumnName
+            // 
+            this.ColumnName.DataPropertyName = "Borrower.Name";
+            this.ColumnName.FillWeight = 94.86185F;
+            this.ColumnName.HeaderText = "Name";
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.ReadOnly = true;
+            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // IsMember
+            // 
+            this.IsMember.FillWeight = 94.86185F;
+            this.IsMember.HeaderText = "Is Member";
+            this.IsMember.Name = "IsMember";
+            // 
+            // DateBorrowed
+            // 
+            this.DateBorrowed.FillWeight = 94.86185F;
+            this.DateBorrowed.HeaderText = "Due Date";
+            this.DateBorrowed.Name = "DateBorrowed";
+            this.DateBorrowed.ReadOnly = true;
+            // 
+            // Amount
+            // 
+            this.Amount.FillWeight = 94.86185F;
+            this.Amount.HeaderText = "Amount";
+            this.Amount.Name = "Amount";
+            this.Amount.ReadOnly = true;
+            // 
+            // MonthlyInterst
+            // 
+            this.MonthlyInterst.FillWeight = 94.86185F;
+            this.MonthlyInterst.HeaderText = "Quarterly Interest";
+            this.MonthlyInterst.Name = "MonthlyInterst";
+            this.MonthlyInterst.ReadOnly = true;
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -374,11 +374,6 @@
         #endregion
         private Panel panel2;
         private DataGridView DGVBorrowers;
-        private DataGridViewTextBoxColumn ColumnName;
-        private DataGridViewTextBoxColumn IsMember;
-        private DataGridViewTextBoxColumn DateBorrowed;
-        private DataGridViewTextBoxColumn Amount;
-        private DataGridViewTextBoxColumn MonthlyInterst;
         private Label LabelDueDate;
         private Label BorrowerLabel;
         private Panel PanelBorrowers;
@@ -394,5 +389,10 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
+        private DataGridViewTextBoxColumn ColumnName;
+        private DataGridViewTextBoxColumn IsMember;
+        private DataGridViewTextBoxColumn DateBorrowed;
+        private DataGridViewTextBoxColumn Amount;
+        private DataGridViewTextBoxColumn MonthlyInterst;
     }
 }
