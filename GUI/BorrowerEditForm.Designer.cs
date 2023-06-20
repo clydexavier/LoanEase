@@ -68,6 +68,7 @@
             this.TextBoxLastname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.TextBoxLastname.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextBoxLastname.Location = new System.Drawing.Point(51, 183);
+            this.TextBoxLastname.MaxLength = 25;
             this.TextBoxLastname.Name = "TextBoxLastname";
             this.TextBoxLastname.PlaceholderText = "Last Name";
             this.TextBoxLastname.Size = new System.Drawing.Size(266, 26);
@@ -78,6 +79,7 @@
             this.TextBoxFirstname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.TextBoxFirstname.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextBoxFirstname.Location = new System.Drawing.Point(51, 125);
+            this.TextBoxFirstname.MaxLength = 25;
             this.TextBoxFirstname.Name = "TextBoxFirstname";
             this.TextBoxFirstname.PlaceholderText = "First Name";
             this.TextBoxFirstname.Size = new System.Drawing.Size(266, 26);

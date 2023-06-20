@@ -6,9 +6,11 @@ namespace LoanEase
     {
         public string FirstName;
         public string LastName;
+        public string FullName;
         public bool isMember;
         //name, is member, borrowed time, loan, monthly
         public decimal loan;
+        public decimal initialLoan;
         public DateTime BorrowedTime;
         public DateTime? PayedTime;
         public decimal monthlyInterest;
@@ -17,6 +19,9 @@ namespace LoanEase
         {
             this.FirstName = first_name;
             this.LastName = last_name;
+            this.FullName = this.FirstName + " " + this.LastName;
+
+            this.initialLoan= loan;
             this.isMember = is_member;
             
             this.BorrowedTime = DateTime.Now;

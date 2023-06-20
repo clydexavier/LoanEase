@@ -24,7 +24,9 @@ namespace GUI
         public void PopulatePayments()
         {
             this.DGVPayments.Rows.Clear();
-            foreach (Payment p in Database.Payments)
+
+            var sortedPayments = Database.Payments.OrderByDescending(obj => obj.PaymentTime).ToList();
+            foreach (Payment p in sortedPayments)
             {
                 this.DGVPayments.Rows.Add(p.BorrowerName, p.BorrowerIsMember ? "Yes" : "No", p.PaymentTime.ToString("hh:mm MMMM d, yyyy"), p.AmountPayed.ToString("0.00"));
             }

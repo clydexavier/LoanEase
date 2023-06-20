@@ -63,5 +63,11 @@ namespace GUI
             this.ComboBoxIsMember.SelectedIndex = 1;
         }
 
+        private void ButtonBack_Click(object sender, EventArgs e)
+        {
+            this.Reset();
+            this.DialogResult = DialogResult.Cancel;
+            this.Hide();
+        }
     }
 }

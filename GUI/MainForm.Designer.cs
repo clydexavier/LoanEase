@@ -32,7 +32,6 @@
             this.HeadingContainer = new System.Windows.Forms.Panel();
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.ButtonHistory = new System.Windows.Forms.Button();
-            this.ButtonMembers = new System.Windows.Forms.Button();
             this.ButtonLoans = new System.Windows.Forms.Button();
             this.ButtonSettings = new System.Windows.Forms.Button();
             this.ButtonExit = new System.Windows.Forms.Button();
@@ -55,7 +54,6 @@
             // 
             this.ButtonPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.ButtonPanel.Controls.Add(this.ButtonHistory);
-            this.ButtonPanel.Controls.Add(this.ButtonMembers);
             this.ButtonPanel.Controls.Add(this.ButtonLoans);
             this.ButtonPanel.Controls.Add(this.ButtonSettings);
             this.ButtonPanel.Controls.Add(this.ButtonExit);
@@ -76,7 +74,7 @@
             this.ButtonHistory.ForeColor = System.Drawing.Color.White;
             this.ButtonHistory.Image = global::GUI.Properties.Resources.history_white;
             this.ButtonHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonHistory.Location = new System.Drawing.Point(0, 195);
+            this.ButtonHistory.Location = new System.Drawing.Point(0, 130);
             this.ButtonHistory.Name = "ButtonHistory";
             this.ButtonHistory.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.ButtonHistory.Size = new System.Drawing.Size(300, 65);
@@ -84,25 +82,6 @@
             this.ButtonHistory.Text = "History";
             this.ButtonHistory.UseVisualStyleBackColor = false;
             this.ButtonHistory.Click += new System.EventHandler(this.ButtonHistory_Click);
-            // 
-            // ButtonMembers
-            // 
-            this.ButtonMembers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
-            this.ButtonMembers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ButtonMembers.FlatAppearance.BorderSize = 0;
-            this.ButtonMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ButtonMembers.ForeColor = System.Drawing.Color.White;
-            this.ButtonMembers.Image = global::GUI.Properties.Resources.human_white;
-            this.ButtonMembers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonMembers.Location = new System.Drawing.Point(0, 130);
-            this.ButtonMembers.Name = "ButtonMembers";
-            this.ButtonMembers.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.ButtonMembers.Size = new System.Drawing.Size(300, 65);
-            this.ButtonMembers.TabIndex = 14;
-            this.ButtonMembers.Text = "Members";
-            this.ButtonMembers.UseVisualStyleBackColor = false;
-            this.ButtonMembers.Click += new System.EventHandler(this.ButtonMembers_Click);
             // 
             // ButtonLoans
             // 
@@ -217,7 +196,6 @@
         private Button ButtonSettings;
         private Button ButtonExit;
         private Button ButtonHome;
-        private Button ButtonMembers;
         private Button ButtonLoans;
         private Button ButtonHistory;
         public Panel MainPanel;

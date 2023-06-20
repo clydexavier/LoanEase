@@ -12,6 +12,7 @@ namespace GUI
         public static BorrowerAddForm addBorrowerForm = new BorrowerAddForm();
         public static BorrowerEditForm editBorrowerForm;
         public static BorrowerPayForm payForm;
+        public static ConfirmForm confirmForm;
 
         public Borrower? selectedBorrower;
 
@@ -22,6 +23,7 @@ namespace GUI
             this.Dock = DockStyle.Fill;
             editBorrowerForm = new BorrowerEditForm(this);
             payForm = new BorrowerPayForm(this);
+            confirmForm = new ConfirmForm(this);
 
 
 
@@ -30,6 +32,7 @@ namespace GUI
             addBorrowerForm.AddBorrower += Refresh_PopulateDataGrid;
             editBorrowerForm.EditBorrower += Refresh_PopulateDataGrid;
             payForm.PayBorrower += Refresh_PopulateDataGrid;
+            confirmForm.DeleteBorrower += Refresh_PopulateDataGrid;
         }
 
         private void Refresh_PopulateDataGrid(object? sender, EventArgs e)
@@ -73,7 +76,22 @@ namespace GUI
                 e.Graphics.DrawImage(Properties.Resources.edit, new Rectangle(x, y, h, w));
                 e.Handled = true;
             }
+
             if (e.ColumnIndex == 6)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                var w = Properties.Resources.delete.Width;
+                var h = Properties.Resources.delete.Height;
+
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(Properties.Resources.delete, new Rectangle(x, y, h, w));
+                e.Handled = true;
+            }
+
+            if (e.ColumnIndex == 7)
             {
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
 
@@ -141,6 +159,39 @@ namespace GUI
 
 
                 DisableControls(this);
+                confirmForm.ShowDialog();
+                if(confirmForm.DialogResult == DialogResult.OK)
+                {
+                    Database.TotalLended -= selectedBorrower.initialLoan;
+                    Database.borrowers.Remove(selectedBorrower);
+                    Database.Save();
+                    this.PopulateDataGrid();
+
+                }
+                EnableControls(this);
+
+            }
+
+
+            else if (e.ColumnIndex == 7)
+            {
+                string[] name = DGVBorrowers.Rows[e.RowIndex].Cells[0].Value.ToString().Split(' ');
+
+                //Attributes of the borrower you want to edit
+                string firstName = string.Join(" ", name, 0, name.Length - 1);
+                string lastName = name[name.Length - 1];
+                bool isMember = DGVBorrowers.Rows[e.RowIndex].Cells[1].Value.ToString() == "Yes";
+
+                //Search the borrower object
+                foreach (var b in Database.borrowers)
+                {
+                    if (!firstName.Equals(b.FirstName) || !lastName.Equals(b.LastName) || !isMember == b.isMember) continue;
+                    selectedBorrower = b;
+                    break;
+                }
+
+
+                DisableControls(this);
                 payForm.ShowDialog();
                 EnableControls(this);
 
@@ -183,7 +234,7 @@ namespace GUI
             DGVBorrowers.Rows.Clear();
             foreach (Borrower b in Database.borrowers)
             {
-                if(b.FirstName.ToLower().Contains(searchString) || b.LastName.ToLower().Contains(searchString))
+                if(b.FullName.ToLower().Contains(searchString))
                 {
                     this.DGVBorrowers.Rows.Add(b.FirstName + " " + b.LastName, b.isMember ? "Yes" : "No", b.BorrowedTime.ToString("MMMM d, yyyy"), "PHP " + b.loan.ToString("0.00"), "PHP " + b.monthlyInterest.ToString("0.00"));
                 }

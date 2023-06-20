@@ -29,21 +29,20 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelTop = new System.Windows.Forms.Panel();
             this.ButtonAddBorrower = new System.Windows.Forms.Button();
             this.BorrowerLabel = new System.Windows.Forms.Label();
             this.DGVBorrowers = new System.Windows.Forms.DataGridView();
+            this.TextBoxSearch = new System.Windows.Forms.TextBox();
             this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsMember = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateBorrowed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MonthlyInterst = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EditButton = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.PayButton = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.TextBoxSearch = new System.Windows.Forms.TextBox();
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVBorrowers)).BeginInit();
             this.SuspendLayout();
@@ -115,15 +114,16 @@
             this.Amount,
             this.MonthlyInterst,
             this.EditButton,
+            this.Delete,
             this.PayButton});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVBorrowers.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVBorrowers.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGVBorrowers.EnableHeadersVisualStyles = false;
             this.DGVBorrowers.Location = new System.Drawing.Point(33, 132);
             this.DGVBorrowers.Margin = new System.Windows.Forms.Padding(0);
@@ -141,68 +141,6 @@
             this.DGVBorrowers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVBorrowers_CellClick);
             this.DGVBorrowers.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DGVBorrowers_CellPainting);
             // 
-            // ColumnName
-            // 
-            this.ColumnName.DataPropertyName = "Borrower.Name";
-            this.ColumnName.FillWeight = 94.86185F;
-            this.ColumnName.HeaderText = "Name";
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.ReadOnly = true;
-            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // IsMember
-            // 
-            this.IsMember.FillWeight = 94.86185F;
-            this.IsMember.HeaderText = "Is Member";
-            this.IsMember.Name = "IsMember";
-            // 
-            // DateBorrowed
-            // 
-            this.DateBorrowed.FillWeight = 94.86185F;
-            this.DateBorrowed.HeaderText = "Date Borrowed";
-            this.DateBorrowed.Name = "DateBorrowed";
-            this.DateBorrowed.ReadOnly = true;
-            // 
-            // Amount
-            // 
-            this.Amount.FillWeight = 94.86185F;
-            this.Amount.HeaderText = "Amount";
-            this.Amount.Name = "Amount";
-            this.Amount.ReadOnly = true;
-            // 
-            // MonthlyInterst
-            // 
-            this.MonthlyInterst.FillWeight = 94.86185F;
-            this.MonthlyInterst.HeaderText = "Monthly Interest";
-            this.MonthlyInterst.Name = "MonthlyInterst";
-            this.MonthlyInterst.ReadOnly = true;
-            // 
-            // EditButton
-            // 
-            this.EditButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.EditButton.DefaultCellStyle = dataGridViewCellStyle2;
-            this.EditButton.FillWeight = 121.8274F;
-            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditButton.HeaderText = "";
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.EditButton.Text = "edit";
-            this.EditButton.Width = 80;
-            // 
-            // PayButton
-            // 
-            this.PayButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.PayButton.DefaultCellStyle = dataGridViewCellStyle3;
-            this.PayButton.FillWeight = 103.8633F;
-            this.PayButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PayButton.HeaderText = "";
-            this.PayButton.Name = "PayButton";
-            this.PayButton.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.PayButton.Text = "pay";
-            this.PayButton.Width = 80;
-            // 
             // TextBoxSearch
             // 
             this.TextBoxSearch.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -212,6 +150,74 @@
             this.TextBoxSearch.Size = new System.Drawing.Size(246, 26);
             this.TextBoxSearch.TabIndex = 3;
             this.TextBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
+            // 
+            // ColumnName
+            // 
+            this.ColumnName.DataPropertyName = "Borrower.Name";
+            this.ColumnName.FillWeight = 77.60936F;
+            this.ColumnName.HeaderText = "Name";
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.ReadOnly = true;
+            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // IsMember
+            // 
+            this.IsMember.FillWeight = 77.60936F;
+            this.IsMember.HeaderText = "Is Member";
+            this.IsMember.Name = "IsMember";
+            // 
+            // DateBorrowed
+            // 
+            this.DateBorrowed.FillWeight = 77.60936F;
+            this.DateBorrowed.HeaderText = "Date Borrowed";
+            this.DateBorrowed.Name = "DateBorrowed";
+            this.DateBorrowed.ReadOnly = true;
+            // 
+            // Amount
+            // 
+            this.Amount.FillWeight = 77.60936F;
+            this.Amount.HeaderText = "Amount";
+            this.Amount.Name = "Amount";
+            this.Amount.ReadOnly = true;
+            // 
+            // MonthlyInterst
+            // 
+            this.MonthlyInterst.FillWeight = 77.60936F;
+            this.MonthlyInterst.HeaderText = "Quarterly Interest";
+            this.MonthlyInterst.Name = "MonthlyInterst";
+            this.MonthlyInterst.ReadOnly = true;
+            // 
+            // EditButton
+            // 
+            this.EditButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.EditButton.FillWeight = 121.8274F;
+            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditButton.HeaderText = "Edit";
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.EditButton.Text = "edit";
+            this.EditButton.Width = 80;
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Delete.FillWeight = 121.8274F;
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Delete.Width = 80;
+            // 
+            // PayButton
+            // 
+            this.PayButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.PayButton.FillWeight = 103.8633F;
+            this.PayButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PayButton.HeaderText = "Pay";
+            this.PayButton.Name = "PayButton";
+            this.PayButton.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.PayButton.Text = "pay";
+            this.PayButton.Width = 80;
             // 
             // BorrowerForm
             // 
@@ -244,13 +250,14 @@
         private Label BorrowerLabel;
         private DataGridView DGVBorrowers;
         private Button ButtonAddBorrower;
+        private TextBox TextBoxSearch;
         private DataGridViewTextBoxColumn ColumnName;
         private DataGridViewTextBoxColumn IsMember;
         private DataGridViewTextBoxColumn DateBorrowed;
         private DataGridViewTextBoxColumn Amount;
         private DataGridViewTextBoxColumn MonthlyInterst;
         private DataGridViewButtonColumn EditButton;
+        private DataGridViewButtonColumn Delete;
         private DataGridViewButtonColumn PayButton;
-        private TextBox TextBoxSearch;
     }
 }

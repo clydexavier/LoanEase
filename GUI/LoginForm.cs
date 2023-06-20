@@ -57,5 +57,24 @@ namespace GUI
             bool isPasswordValid = BCryptNet.Verify(password, hashedPassword);
             return isPasswordValid;
         }
+
+
+        private void UsernameTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoginButton_Click(sender, e);
+                return;
+            }
+        }
+
+        private void PasswordTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoginButton_Click(sender, e);
+                return;
+            }
+        }
     }
 }

@@ -35,11 +35,13 @@
             this.TextBoxLastname = new System.Windows.Forms.TextBox();
             this.TextBoxFirstname = new System.Windows.Forms.TextBox();
             this.LabelAddBorrower = new System.Windows.Forms.Label();
+            this.ButtonBack = new System.Windows.Forms.Button();
             this.PanelAddBorrower.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelAddBorrower
             // 
+            this.PanelAddBorrower.Controls.Add(this.ButtonBack);
             this.PanelAddBorrower.Controls.Add(this.ButtonConfirm);
             this.PanelAddBorrower.Controls.Add(this.ComboBoxIsMember);
             this.PanelAddBorrower.Controls.Add(this.TextBoxAmount);
@@ -84,6 +86,7 @@
             // 
             this.TextBoxAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.TextBoxAmount.Location = new System.Drawing.Point(51, 240);
+            this.TextBoxAmount.MaxLength = 7;
             this.TextBoxAmount.Name = "TextBoxAmount";
             this.TextBoxAmount.PlaceholderText = "Amount";
             this.TextBoxAmount.Size = new System.Drawing.Size(266, 29);
@@ -93,6 +96,7 @@
             // 
             this.TextBoxLastname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.TextBoxLastname.Location = new System.Drawing.Point(51, 185);
+            this.TextBoxLastname.MaxLength = 25;
             this.TextBoxLastname.Name = "TextBoxLastname";
             this.TextBoxLastname.PlaceholderText = "Last Name";
             this.TextBoxLastname.Size = new System.Drawing.Size(266, 29);
@@ -102,6 +106,7 @@
             // 
             this.TextBoxFirstname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.TextBoxFirstname.Location = new System.Drawing.Point(51, 125);
+            this.TextBoxFirstname.MaxLength = 25;
             this.TextBoxFirstname.Name = "TextBoxFirstname";
             this.TextBoxFirstname.PlaceholderText = "First Name";
             this.TextBoxFirstname.Size = new System.Drawing.Size(266, 29);
@@ -117,6 +122,19 @@
             this.LabelAddBorrower.Size = new System.Drawing.Size(229, 37);
             this.LabelAddBorrower.TabIndex = 0;
             this.LabelAddBorrower.Text = "Add Borrower";
+            // 
+            // ButtonBack
+            // 
+            this.ButtonBack.FlatAppearance.BorderSize = 0;
+            this.ButtonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonBack.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.ButtonBack.Image = global::GUI.Properties.Resources.close;
+            this.ButtonBack.Location = new System.Drawing.Point(387, 0);
+            this.ButtonBack.Name = "ButtonBack";
+            this.ButtonBack.Size = new System.Drawing.Size(40, 40);
+            this.ButtonBack.TabIndex = 17;
+            this.ButtonBack.UseVisualStyleBackColor = true;
+            this.ButtonBack.Click += new System.EventHandler(this.ButtonBack_Click);
             // 
             // BorrowerAddForm
             // 
@@ -145,5 +163,6 @@
         private TextBox TextBoxLastname;
         private TextBox TextBoxFirstname;
         private Button ButtonConfirm;
+        private Button ButtonBack;
     }
 }

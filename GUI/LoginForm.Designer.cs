@@ -34,7 +34,6 @@
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.UsernamePanel = new System.Windows.Forms.Panel();
             this.UsernameTextBox = new System.Windows.Forms.TextBox();
-            this.ForgotPasswordLabel = new System.Windows.Forms.LinkLabel();
             this.LoginButton = new System.Windows.Forms.Button();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.Asterisk2 = new System.Windows.Forms.Label();
@@ -53,7 +52,6 @@
             this.LoginPanel.Controls.Add(this.ButtonExit);
             this.LoginPanel.Controls.Add(this.PasswordPanel);
             this.LoginPanel.Controls.Add(this.UsernamePanel);
-            this.LoginPanel.Controls.Add(this.ForgotPasswordLabel);
             this.LoginPanel.Controls.Add(this.LoginButton);
             this.LoginPanel.Controls.Add(this.PasswordLabel);
             this.LoginPanel.Controls.Add(this.Asterisk2);
@@ -112,6 +110,7 @@
             this.PasswordTextBox.TabIndex = 2;
             this.PasswordTextBox.UseSystemPasswordChar = true;
             this.PasswordTextBox.WordWrap = false;
+            this.PasswordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswordTextBox_KeyDown);
             // 
             // UsernamePanel
             // 
@@ -140,20 +139,7 @@
             this.UsernameTextBox.Size = new System.Drawing.Size(339, 21);
             this.UsernameTextBox.TabIndex = 1;
             this.UsernameTextBox.WordWrap = false;
-            // 
-            // ForgotPasswordLabel
-            // 
-            this.ForgotPasswordLabel.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ForgotPasswordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(91)))), ((int)(((byte)(254)))));
-            this.ForgotPasswordLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.ForgotPasswordLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
-            this.ForgotPasswordLabel.Location = new System.Drawing.Point(373, 379);
-            this.ForgotPasswordLabel.Name = "ForgotPasswordLabel";
-            this.ForgotPasswordLabel.Size = new System.Drawing.Size(172, 17);
-            this.ForgotPasswordLabel.TabIndex = 5;
-            this.ForgotPasswordLabel.TabStop = true;
-            this.ForgotPasswordLabel.Text = "Forgot your password?";
-            this.ForgotPasswordLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ForgotPasswordLabel_LinkClicked);
+            this.UsernameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UsernameTextBox_KeyDown);
             // 
             // LoginButton
             // 
@@ -256,7 +242,6 @@
         private Label Asterisk1;
         private TextBox PasswordTextBox;
         private TextBox UsernameTextBox;
-        private LinkLabel ForgotPasswordLabel;
         private Button LoginButton;
         private Label PasswordLabel;
         private Label Asterisk2;

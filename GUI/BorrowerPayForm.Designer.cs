@@ -60,6 +60,7 @@
             // 
             this.TextBoxAmount.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextBoxAmount.Location = new System.Drawing.Point(212, 116);
+            this.TextBoxAmount.MaxLength = 7;
             this.TextBoxAmount.Name = "TextBoxAmount";
             this.TextBoxAmount.Size = new System.Drawing.Size(194, 29);
             this.TextBoxAmount.TabIndex = 9;

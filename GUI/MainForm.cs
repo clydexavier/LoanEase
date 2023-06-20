@@ -17,7 +17,6 @@ namespace GUI
 
         private static BorrowerForm borrowerForm = new BorrowerForm();
         public static HomeForm homeForm = new HomeForm();
-        private static MembersForm membersForm = new MembersForm();
         private static HistoryForm historyForm = new HistoryForm();
         private static AccountForm accountForm = new AccountForm();
         
@@ -53,18 +52,6 @@ namespace GUI
         }
 
 
-        private void ButtonMembers_Click(object sender, EventArgs e)
-        {
-            if (this.ActiveForm != null)
-            {
-                this.ActiveForm.Hide();
-                this.ActiveForm = membersForm;
-            }
-            MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(membersForm);
-            membersForm.Show();
-
-        }
 
         private void ButtonLoans_Click(object sender, EventArgs e)
         {
